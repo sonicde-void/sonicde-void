@@ -1,0 +1,33 @@
+# Template file for 'sonic-oxygen-qt6'
+pkgname=sonic-oxygen-qt6
+version=6.7.3
+revision=2
+build_style=cmake
+configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF
+ -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+ -DKF6_HOST_TOOLING=/usr/lib/cmake"
+hostmakedepends="sonic-frameworks-cmake-modules pkg-config qt6-base qt6-tools gettext
+ sonic-frameworks-windowsystem sonic-frameworks-settings-utils sonic-frameworks-package"
+makedepends="qt6-base-private-devel qt6-declarative-devel
+ sonic-frameworks-internationalization-devel
+ sonic-frameworks-quick-ui-devel
+ sonic-frameworks-settings-utils-devel
+ sonic-frameworks-settings-devel
+ sonic-frameworks-core-addons-devel
+ sonic-frameworks-gui-addons-devel
+ sonic-frameworks-widgets-addons-devel
+ sonic-frameworks-app-info-devel
+ sonic-frameworks-autocomplete-devel
+ kf6-frameworkintegration-devel
+ sonic-frameworks-windowsystem-devel
+ sonic-decoration-devel
+ sonic-interface-libraries-devel"
+short_desc="Classic style for Qt and Sonic applications"
+maintainer="nerdyslacker <karyan40024@gmail.com>"
+license="LGPL-2.1-or-later"
+homepage="https://github.com/Sonic-DE/sonic-oxygen"
+distfiles="https://github.com/Sonic-DE/sonic-oxygen/archive/refs/tags/${version}.tar.gz"
+checksum=368c46ecbbb25f81727ef714cf4fea27ee752ca33b8a5a47b5f0ab3b7c8a2fe7
+provides="oxygen-qt6-${version}_${revision}"
+conflicts="oxygen-qt6"
+replaces="oxygen-qt6>=0"
