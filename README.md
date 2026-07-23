@@ -29,3 +29,7 @@
 ## Manual build
 
 For manual build follow Void Linux official documentation: [void-packages](https://github.com/void-linux/void-packages):
+
+## Screenshot
+
+<img width="auto" height="auto" alt="SonicDE-Void" src="img/SonicDE-Void.png" />
