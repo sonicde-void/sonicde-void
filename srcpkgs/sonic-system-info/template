@@ -1,6 +1,6 @@
 # Template file for 'sonic-system-info'
 pkgname=sonic-system-info
-version=6.6.3
+version=6.7.3
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -9,12 +9,12 @@ configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
 hostmakedepends="sonic-frameworks-cmake-modules pkg-config gettext qt6-tools qt6-base
  qt6-concurrent qt6-plugin-odbc qt6-plugin-pgsql qt6-plugin-mysql qt6-plugin-sqlite
  qt6-plugin-tls-openssl qt6-plugin-tls-qcertonly qt6-plugin-networkinformation
- sonic-frameworks-doctools kf6-kpackage kf6-kcmutils kf6-kconfig sonic-frameworks-auth-tools
+ sonic-frameworks-doctools sonic-frameworks-package sonic-frameworks-settings-utils sonic-frameworks-settings sonic-frameworks-auth-tools
  sonic-frameworks-auth-devel qt6-declarative-host-tools"
-makedepends="sonic-interface-libraries-devel kf6-kcmutils-devel sonic-frameworks-auth-devel
- qt6-base-private-devel libdrm-devel sonic-frameworks-io-devel kf6-kservice-devel
+makedepends="sonic-interface-libraries-devel sonic-frameworks-settings-utils-devel sonic-frameworks-auth-devel
+ qt6-base-private-devel libdrm-devel sonic-frameworks-io-devel sonic-frameworks-app-info-devel
  sonic-frameworks-core-addons-devel qt6-declarative-private-devel glu-devel pciutils-devel
- libraw1394-devel kf6-solid-devel libdisplay-info-devel libusb-devel pulseaudio-devel Vulkan-Headers
+ libraw1394-devel sonic-frameworks-device-integration-devel libdisplay-info-devel libusb-devel pulseaudio-devel Vulkan-Headers
  fwupd-devel"
 depends="hwids systemsettings xdpyinfo"
 short_desc="System information tool for Sonic Desktop"
@@ -22,7 +22,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-system-info"
 distfiles="https://github.com/Sonic-DE/sonic-system-info/archive/refs/tags/${version}.tar.gz"
-checksum=b870994588b93b0b058130eeaeb472dec1185d5ac3536a0793d00bd6e2491528
+checksum=aa81c0bed3f9dbac37473c70505ea4143af1759aebfbc1ee8fa53272e8311866
 provides="kinfocenter-${version}_${revision}"
 conflicts="kinfocenter"
 replaces="kinfocenter>=0"

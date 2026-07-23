@@ -17,7 +17,7 @@
 2. Create config file and add repository:
 
     ```shell
-    printf "repository=https://github.com/sonicde-void/packages/releases/latest/download/\n" | sudo tee /etc/xbps.d/99-repository-sonicde.conf
+    printf "repository=https://github.com/sonicde-void/sonicde-void/releases/latest/download/\n" | sudo tee /etc/xbps.d/99-repository-sonicde.conf
     ```
 
 3. Synchronize the repository and accept the fingerprint (Y):
@@ -28,33 +28,4 @@
 
 ## Manual build
 
-1. Clone both this repository and [void-packages](https://github.com/void-linux/void-packages):
-
-    ```shell
-    git clone https://github.com/sonicde-void/packages.git
-    git clone https://github.com/void-linux/void-packages.git
-    ```
-
-2. Copy the template files into `void-packages`:
-
-    ```shell
-    cp -r packages/srcpkgs/* void-packages/srcpkgs/
-    ```
-
-3. Bootstrap the build system:
-
-    ```shell
-    ./xbps-src binary-bootstrap
-    ```
-
-4. Build the desired packages:
-
-    ```shell
-    ./xbps-src pkg sonic-win sonic-workspace ...
-    ```
-
-5. Install the built packages:
-
-    ```shell
-    sudo xbps-install --repository /hostdir/binpkgs/ sonic-win sonic-workspace ...
-    ```
+For manual build follow Void Linux official documentation: [void-packages](https://github.com/void-linux/void-packages):

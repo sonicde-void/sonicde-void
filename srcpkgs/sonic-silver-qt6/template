@@ -1,0 +1,24 @@
+# Template file for 'sonic-silver-qt5'
+pkgname=sonic-silver-qt5
+version=6.7.3
+revision=1
+build_style=cmake
+configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF
+ -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
+hostmakedepends="sonic-frameworks-cmake-modules gettext qt6-base qt6-tools
+ sonic-frameworks-settings sonic-frameworks-settings-utils-devel"
+makedepends="sonic-frameworks-core-addons-devel sonic-frameworks-color-scheme-devel
+ sonic-frameworks-settings-devel sonic-frameworks-gui-addons-devel sonic-frameworks-internationalization-devel
+ sonic-frameworks-icon-themes-devel sonic-frameworks-windowsystem-devel sonic-frameworks-settings-utils-devel
+ sonic-frameworks-quick-ui-devel kf6-frameworkintegration-devel fftw-devel
+ qt6-svg-devel sonic-decoration-devel"
+depends="sonic-frameworks-silver-icons kf6-frameworkintegration"
+short_desc="Artwork, styles and assets for the Silver visual style of Sonic Desktop"
+maintainer="nerdyslacker <karyan40024@gmail.com>"
+license="GPL-2.0-or-later"
+homepage="https://github.com/Sonic-DE/sonic-silver"
+distfiles="https://github.com/Sonic-DE/sonic-silver/archive/refs/tags/${version}.tar.gz"
+checksum=e39749eece5689ead29ab8c083a47b1e328483452a07ae15af870b2f4e4f5b7a
+provides="breeze-qt6-${version}_${revision}"
+conflicts="breeze-qt6"
+replaces="breeze-qt6>=0"
