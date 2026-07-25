@@ -1,7 +1,7 @@
 # Template file for 'sonic-ssh-password-prompt'
 pkgname=sonic-ssh-password-prompt
 version=6.7.3
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake -DBUILD_QT5=OFF"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-base qt6-tools gettext sonic-frameworks-doctools"
@@ -11,9 +11,9 @@ makedepends="sonic-frameworks-keyring-devel sonic-frameworks-doctools-devel soni
 short_desc="Ssh-add helper for QtKeychain"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
-homepage="https://github.com/Sonic-DE/sonic-silver"
-distfiles="https://github.com/Sonic-DE/sonic-silver/archive/refs/tags/${version}.tar.gz"
-checksum=e39749eece5689ead29ab8c083a47b1e328483452a07ae15af870b2f4e4f5b7a
+homepage="https://github.com/Sonic-DE/sonic-ssh-password-prompt"
+distfiles="https://github.com/Sonic-DE/sonic-ssh-password-prompt/archive/refs/tags/${version}.tar.gz"
+checksum=c5ae72bb365f55c897a8cc7d5a499bdd9b75c10c1744c25cc67883eea586f24f
 alternatives="ssh-askpass:/usr/libexec/ssh-askpass:/usr/bin/ksshaskpass"
 provides="ksshaskpass-${version}_${revision}"
 conflicts="ksshaskpass"

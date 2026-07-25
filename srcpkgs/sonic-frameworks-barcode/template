@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-barcode'
 pkgname=sonic-frameworks-barcode
 version=6.27.0
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base

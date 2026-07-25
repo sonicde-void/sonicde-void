@@ -19,6 +19,7 @@
 !/etc
 !/srcpkgs
 !/xbps-src
+!/img
 !/repo-keys
 !/99-repository-soncide.conf
 etc/conf
