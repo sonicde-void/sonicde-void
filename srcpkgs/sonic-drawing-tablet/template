@@ -21,7 +21,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-drawing-tablet"
 distfiles="https://github.com/Sonic-DE/sonic-drawing-tablet/archive/refs/tags/${version}.tar.gz"
-checksum=b3e00452b2f85d2c9b9b92407c078c87ee3e1b79db8827b60bc3d0acfcf87af6
+checksum=6fc29eeeedbac027c8a61419153e9fb7820fe284f91e596eeb3b5c3fb07aad54
 provides="kcm-wacomtablet-${version}_${revision}"
 conflicts="kcm-wacomtablet"
 replaces="kcm-wacomtablet>=0"

@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-silver"
 distfiles="https://github.com/Sonic-DE/sonic-silver/archive/refs/tags/${version}.tar.gz"
-checksum=e39749eece5689ead29ab8c083a47b1e328483452a07ae15af870b2f4e4f5b7a
+checksum=8e6b173f1e464de9a8647c628eef99e9bdc8191b4e1918e98cc92cecb717cffd
 provides="breeze-qt5-${version}_${revision}"
 conflicts="breeze-qt5"
 replaces="breeze-qt5>=0"

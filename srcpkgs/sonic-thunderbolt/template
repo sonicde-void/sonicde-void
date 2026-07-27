@@ -15,7 +15,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-thunderbolt"
 distfiles="https://github.com/Sonic-DE/sonic-thunderbolt/archive/refs/tags/${version}.tar.gz"
-checksum=af9e5c5126bbb0519f974115940583046d33a2db863b20f37b955502c339bbbb
+checksum=0e9e0b1a399ae7e8f74a92c2fbd5eb494be0d400c34168b0694bfff0418306f8
 provides="plasma-thunderbolt-${version}_${revision}"
 conflicts="plasma-thunderbolt"
 replaces="plasma-thunderbolt>=0"

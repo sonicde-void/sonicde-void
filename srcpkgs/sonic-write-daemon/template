@@ -11,7 +11,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-write-daemon"
 distfiles="https://github.com/Sonic-DE/sonic-write-daemon/archive/refs/tags/${version}.tar.gz"
-checksum=13469d2d737391f4eab813d6e7fc8c6b609514939676937bd6e4f86b71339159
+checksum=1655f6e38c2e75625014fb8d24142961af5ae784c466d9da7fc3339a8880b74e
 provides="kwrited-${version}_${revision}"
 conflicts="kwrited"
 replaces="kwrited>=0"

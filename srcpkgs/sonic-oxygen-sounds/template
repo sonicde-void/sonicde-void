@@ -9,7 +9,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-oxygen-sounds"
 distfiles="https://github.com/Sonic-DE/sonic-oxygen-sounds/archive/refs/tags/${version}.tar.gz"
-checksum=8603a461427a631b19fcad51de09a0a88f67e8dc03a419485e86e6eeee0a919a
+checksum=bd34cdc364be467ffde83e13701f0a2b12105f574d61244405df77fa2df907aa
 provides="oxygen-sounds-${version}_${revision}"
 conflicts="oxygen-sounds"
 replaces="oxygen-sounds>=0"

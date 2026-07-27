@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-polkit-agent"
 distfiles="https://github.com/Sonic-DE/sonic-polkit-agent/archive/refs/tags/${version}.tar.gz"
-checksum=2487f29c4a79458fa5359829587553db423a5204e8a448659bd5163734b29308
+checksum=229e4ec280cc28a40c02b7ba5667aeb8ec1f3df100fc74ebffddeb2f6a848b4c
 provides="polkit-kde-agent-${version}_${revision}"
 conflicts="polkit-kde-agent"
 replaces="polkit-kde-agent>=0"

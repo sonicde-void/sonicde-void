@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-launcher-menu-edit"
 distfiles="https://github.com/Sonic-DE/sonic-launcher-menu-edit/archive/refs/tags/${version}.tar.gz"
-checksum=56d3ca00c6357ca457b4fbfc3db79a32d63291543089123b4287d8be8f7b8355
+checksum=e1339b922f4230f34b49be2ecf916ca9fe5e0e2b27617393e03ab2c57d2c791d
 provides="kmenuedit-${version}_${revision}"
 conflicts="kmenuedit"
 replaces="kmenuedit>=0"

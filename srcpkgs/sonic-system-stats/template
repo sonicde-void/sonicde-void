@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-system-stats"
 distfiles="https://github.com/Sonic-DE/sonic-system-stats/archive/refs/tags/${version}.tar.gz"
-checksum=4f6a1c7a806d4071e8341746111ad51321320bc3d38691afef4e539fb1421ce9
+checksum=a7d599638b41f695e175eb82119f039e65cba56496befbf018145285c422064b
 provides="ksystemstats-${version}_${revision}"
 conflicts="ksystemstats"
 replaces="ksystemstats>=0"

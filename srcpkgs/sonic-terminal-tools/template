@@ -19,7 +19,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-terminal-tools"
 distfiles="https://github.com/Sonic-DE/sonic-terminal-tools/archive/refs/tags/${version}.tar.gz"
-checksum=078bdbca44479176365924a8d788a66a8f2bacf584cc11fbf0f62fbde68d6f41
+checksum=a3f0b47768e5bbd9cf065c6aafb704ceede3a807478622d8b941810cec98b7c4
 provides="kde-cli-tools-${version}_${revision}"
 conflicts="kde-cli-tools"
 replaces="kde-cli-tools>=0"

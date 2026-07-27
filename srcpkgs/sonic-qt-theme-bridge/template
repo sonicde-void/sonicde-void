@@ -17,7 +17,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-qt-theme-bridge"
 distfiles="https://github.com/Sonic-DE/sonic-qt-theme-bridge/archive/refs/tags/${version}.tar.gz"
-checksum=83900df065177d5ba478856384ad1c59c4cdfed613a749165f520caa8318c45b
+checksum=f6143be0ffa6781f302de0010467e8781da213f8eb369df437c94d9c3c94e678
 provides="plasma-integration-${version}_${revision}"
 conflicts="plasma-integration"
 replaces="plasma-integration>=0"

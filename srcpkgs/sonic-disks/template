@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-disks"
 distfiles="https://github.com/Sonic-DE/sonic-disks/archive/refs/tags/${version}.tar.gz"
-checksum=eb476c035d898899b51193360991a08cd75090f062a0f005e49b03c6e791c734
+checksum=00e8af0ad8d9c52a828f1ea2488d1c1b8fee0a8c16469cb554afa2672ea669ad
 provides="plasma-disks-${version}_${revision}"
 conflicts="plasma-disks"
 replaces="plasma-disks>=0"

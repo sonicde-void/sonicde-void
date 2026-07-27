@@ -11,7 +11,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-polkit"
 distfiles="https://github.com/Sonic-DE/sonic-polkit/archive/refs/tags/${version}.tar.gz"
-checksum=11355a4cda6508438edcc2c0cecd2598d1c5b99936f9d008f6522ca5f5f98bfe
+checksum=ec325d7e9b2293380c2596f38c617f124d145577264e80d40713de780f5e8448
 provides="polkit-qt6-${version}_${revision}"
 conflicts="polkit-qt6"
 replaces="polkit-qt6>=0"

@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-keyring-pam"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-keyring-pam/archive/refs/tags/${version}.tar.gz"
-checksum=bc6f14e1323a39952cf5afdb46f943d6b30a68f073aa06a6943e0795c174e124
+checksum=6c88a6f8dd37e349fc7092a11f3ddfe9a747c2ae893f0f78537bb6227f1229af
 provides="kwallet-pam-${version}_${revision}"
 conflicts="kwallet-pam"
 replaces="kwallet-pam>=0"

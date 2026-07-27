@@ -15,7 +15,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-vault"
 distfiles="https://github.com/Sonic-DE/sonic-vault/archive/refs/tags/${version}.tar.gz"
-checksum=0978c1e5f849b525b455c7454ea657133f5c46376683d1580a69e88f304b4930
+checksum=7a0754305c5a6bac35eea7bb393e3ae08f983c5633e495fa70ab912755d48c89
 provides="plasma-vault-${version}_${revision}"
 conflicts="plasma-vault"
 replaces="plasma-vault>=0"

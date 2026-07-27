@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-io-fuse"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-io-fuse/archive/refs/tags/${version}.tar.gz"
-checksum=01d2b761a3619ffae7b0ff044fc59658091773b8c589c96bc71f805644df09b3
+checksum=a6f414d9aec161f5071464dd46753b445c87b15653925362d5110a0c72f927a3
 provides="sonic-frameworks-io-fuse-${version}_${revision}"
 conflicts="sonic-frameworks-io-fuse"
 replaces="sonic-frameworks-io-fuse>=0"

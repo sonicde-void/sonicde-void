@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-plasma5-support-library"
 distfiles="https://github.com/Sonic-DE/sonic-plasma5-support-library/archive/refs/tags/${version}.tar.gz"
-checksum=1afca7f3810ec5e2f5a8644b7a7408d6e65719064ecb1ef017770136943bc4b1
+checksum=6f91226d18078d5e65a6cb921fdc89ee6e4f8ed425231739dfe0c10d77f686af
 provides="plasma5support-${version}_${revision}"
 conflicts="plasma5support"
 replaces="plasma5support>=0"
