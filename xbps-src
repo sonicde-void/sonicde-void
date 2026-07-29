@@ -188,6 +188,9 @@ $(print_cross_targets)
 -E  If a binary package exists in a repository for the target package,
     do not try to build it, exit immediately.
 
+-e  If a binary package exists in a local repository for the target package,
+    do not try to build it, exit immediately.
+
 -f  Force running the specified stage (configure/build/install/pkg)
     even if it ran successfully.
 
@@ -218,6 +221,8 @@ $(print_cross_targets)
 
 -N  Disable use of remote repositories to resolve dependencies.
 
+-n  Disable syncing of remote repositories.
+
 -o  <opt,~opt2,...>
     Enable or disable (prefixed with ~) package build options. If 'etc/conf'
     already specifies some, it is merged. Keep in mind that these options
@@ -231,9 +236,10 @@ $(print_cross_targets)
     Variable is split and each word is printed in separate line by default.
     In order to print the whole value in one line, append asterisk to variable name.
 
--Q  Enable running the check stage.
+-Q  Enable running the check stage, for the target package only.
 
 -K  Enable running the check stage with longer tests.
+    Unlike -Q, this will also run the check stage on built dependencies.
 
 -q  Suppress informational output of xbps-src (build output is still printed).
 
@@ -252,7 +258,7 @@ $(print_cross_targets)
     This flag requires xbps-uchroot(1), and won't work on filesystems that don't
     support overlayfs.
 
--v  Show verbose messages (only affects update-check).
+-v  Show verbose messages.
 
 -V  Print version of xbps, then exit.
 
@@ -343,10 +349,11 @@ read_pkg() {
 }
 
 setup_distfiles_mirror() {
+    local mirror_list="$1"
     local mirror scheme path
 
     # Scheme file:// mirror locations only work with uchroot
-    for mirror in $XBPS_DISTFILES_MIRROR; do
+    for mirror in $mirror_list; do
         scheme="file"
         if [[ "$mirror" == *://* ]]; then
             scheme="${mirror%%://*}"
@@ -375,15 +382,14 @@ setup_distfiles_mirror() {
 # main()
 #
 readonly PROGNAME="${0##*/}"
-readonly XBPS_VERSION_REQ="0.55"
+readonly XBPS_VERSION_REQ="0.60"
 XBPS_VERSION=$(xbps-uhelper -V)
 XBPS_VERSION=${XBPS_VERSION%%API*}
 XBPS_VERSION=${XBPS_VERSION##*:}
 readonly XBPS_SRC_VERSION="113"
-export XBPS_MACHINE=$(xbps-uhelper -C /dev/null arch)
 
 XBPS_OPTIONS=
-XBPS_OPTSTRING="1A:a:bc:CEfgGhH:iIj:Lm:No:p:qsQKr:tvV"
+XBPS_OPTSTRING="1A:a:bc:CEefgGhH:iIj:Lm:Nno:p:qsQKr:tvV"
 
 # Preprocess arguments in order to allow options before and after XBPS_TARGET.
 eval set -- $(getopt "$XBPS_OPTSTRING" "$@");
@@ -400,6 +406,7 @@ while getopts "$XBPS_OPTSTRING" opt; do
         c) XBPS_ARG_CONFIG="$OPTARG"; XBPS_OPTIONS+=" -c $OPTARG";;
         C) XBPS_ARG_KEEP_ALL=1; XBPS_OPTIONS+=" -C";;
         E) XBPS_ARG_BINPKG_EXISTS=1; XBPS_OPTIONS+=" -E";;
+        e) XBPS_ARG_BINPKG_EXISTS_LOCAL=1; XBPS_OPTIONS+=" -e";;
         f) XBPS_ARG_BUILD_FORCEMODE=1; XBPS_OPTIONS+=" -f";;
         G) XBPS_ARG_USE_GIT_REVS=1; XBPS_OPTIONS+=" -G";;
         g) XBPS_ARG_DEBUG_PKGS=1; XBPS_OPTIONS+=" -g";;
@@ -411,6 +418,7 @@ while getopts "$XBPS_OPTSTRING" opt; do
         L) export NOCOLORS=1; XBPS_OPTIONS+=" -L";;
         m) XBPS_ARG_MASTERDIR="$OPTARG"; XBPS_OPTIONS+=" -m $OPTARG";;
         N) XBPS_ARG_SKIP_REMOTEREPOS=1; XBPS_OPTIONS+=" -N";;
+        n) XBPS_ARG_SKIP_SYNC=1; XBPS_OPTIONS+=" -n";;
         o) XBPS_ARG_PKG_OPTIONS="$OPTARG"; XBPS_OPTIONS+=" -o $OPTARG";;
         p) XBPS_ARG_PRINT_VARIABLES="$OPTARG"; XBPS_OPTIONS+=" -p $OPTARG";;
         q) XBPS_ARG_QUIET=1; XBPS_OPTIONS+=" -q";;
@@ -494,10 +502,12 @@ fi
 [ -n "$XBPS_ARG_BUILD_ONLY_ONE_PKG" ] && XBPS_BUILD_ONLY_ONE_PKG=yes
 [ -n "$XBPS_ARG_IGNORE_BROKENNESS" ] && XBPS_IGNORE_BROKENNESS=1
 [ -n "$XBPS_ARG_SKIP_REMOTEREPOS" ] && XBPS_SKIP_REMOTEREPOS=1
+[ -n "$XBPS_ARG_SKIP_SYNC" ] && XBPS_SKIP_SYNC=1
 [ -n "$XBPS_ARG_BUILD_FORCEMODE" ] && XBPS_BUILD_FORCEMODE=1
 [ -n "$XBPS_ARG_INFORMATIVE_RUN" ] && XBPS_INFORMATIVE_RUN=1
 [ -n "$XBPS_ARG_TEMP_MASTERDIR" ] && XBPS_TEMP_MASTERDIR=1
 [ -n "$XBPS_ARG_BINPKG_EXISTS" ] && XBPS_BINPKG_EXISTS=1
+[ -n "$XBPS_ARG_BINPKG_EXISTS_LOCAL" ] && XBPS_BINPKG_EXISTS_LOCAL=1
 [ -n "$XBPS_ARG_USE_GIT_REVS" ] && XBPS_USE_GIT_REVS=1
 [ -n "$XBPS_ARG_DEBUG_PKGS" ] && XBPS_DEBUG_PKGS=1
 [ -n "$XBPS_ARG_SKIP_DEPS" ] && XBPS_SKIP_DEPS=1
@@ -519,11 +529,24 @@ else
     : ${XBPS_MAKEJOBS:=1}
 fi
 
+if [ -z "$XBPS_MACHINE" ]; then
+    XBPS_MACHINE=$(xbps-uhelper -C /dev/null arch)
+    # default to the same libc when -a is given but not -A
+    if [ -n "$XBPS_CROSS_BUILD" ]; then
+        if [ -z "${XBPS_CROSS_BUILD##*-musl}" ]; then
+            XBPS_MACHINE="${XBPS_MACHINE%-musl}-musl"
+        else
+            XBPS_MACHINE="${XBPS_MACHINE%-musl}"
+        fi
+    fi
+fi
+
 export XBPS_BUILD_ONLY_ONE_PKG XBPS_SKIP_REMOTEREPOS XBPS_BUILD_FORCEMODE \
-       XBPS_INFORMATIVE_RUN XBPS_TEMP_MASTERDIR XBPS_BINPKG_EXISTS \
+       XBPS_INFORMATIVE_RUN XBPS_TEMP_MASTERDIR XBPS_BINPKG_EXISTS XBPS_BINPKG_EXISTS_LOCAL \
        XBPS_USE_GIT_REVS XBPS_CHECK_PKGS XBPS_DEBUG_PKGS XBPS_SKIP_DEPS \
        XBPS_KEEP_ALL XBPS_QUIET XBPS_ALT_REPOSITORY XBPS_STRICT XBPS_CROSS_BUILD \
-       XBPS_MAKEJOBS XBPS_PRINT_VARIABLES XBPS_IGNORE_BROKENNESS
+       XBPS_MAKEJOBS XBPS_PRINT_VARIABLES XBPS_IGNORE_BROKENNESS XBPS_MACHINE \
+       XBPS_VERBOSE
 
 # The masterdir/hostdir variables are forced and readonly in chroot
 if [ -z "$IN_CHROOT" ]; then
@@ -614,6 +637,14 @@ if [ "$2" ]; then
     XBPS_TARGET_PKG="${2##*/}"
 fi
 
+# A temporary masterdir requires xbps-uchroot(1) or bwrap(1).
+if [ -z "$IN_CHROOT" -a -n "$XBPS_TEMP_MASTERDIR" ]; then
+    case "$XBPS_CHROOT_CMD" in
+    uchroot|bwrap) ;;
+    *) XBPS_CHROOT_CMD="uchroot" ;;
+    esac
+fi
+
 # Check for CHROOT_READY and set up XBPS_ARCH environment var for xbps.
 chroot_check
 check_native_arch
@@ -692,11 +723,11 @@ export XBPS_SHUTILSDIR XBPS_CROSSPFDIR XBPS_TRIGGERSDIR \
     XBPS_CHECK_PKGS XBPS_CCACHE XBPS_DISTCC XBPS_DISTCC_HOSTS XBPS_SKIP_DEPS \
     XBPS_SKIP_REMOTEREPOS XBPS_CROSS_BUILD XBPS_ARG_PKG_OPTIONS XBPS_CONFIG_FILE \
     XBPS_KEEP_ALL XBPS_HOSTDIR XBPS_MASTERDIR XBPS_SRC_VERSION \
-    XBPS_DESTDIR XBPS_MACHINE XBPS_TEMP_MASTERDIR XBPS_BINPKG_EXISTS \
+    XBPS_DESTDIR XBPS_MACHINE XBPS_TEMP_MASTERDIR XBPS_BINPKG_EXISTS XBPS_BINPKG_EXISTS_LOCAL \
     XBPS_LIBEXECDIR XBPS_DISTDIR XBPS_DISTFILES_MIRROR XBPS_ALLOW_RESTRICTED \
     XBPS_USE_GIT_COMMIT_DATE XBPS_PKG_COMPTYPE XBPS_REPO_COMPTYPE \
     XBPS_BUILDHELPERDIR XBPS_USE_BUILD_MTIME XBPS_BUILD_ENVIRONMENT \
-    XBPS_PRESERVE_PKGS XBPS_IGNORE_BROKENNESS
+    XBPS_PRESERVE_PKGS XBPS_IGNORE_BROKENNESS XBPS_DISTFILES_FALLBACK
 
 for i in REPOSITORY DESTDIR BUILDDIR SRCDISTDIR; do
     eval val="\$XBPS_$i"
@@ -706,12 +737,6 @@ for i in REPOSITORY DESTDIR BUILDDIR SRCDISTDIR; do
     unset val
 done
 
-# A temporary masterdir requires xbps-uchroot(1) and -O to use overlayfs
-# on tmpfs (available with xbps-0.45).
-if [ -z "$IN_CHROOT" -a -n "$XBPS_TEMP_MASTERDIR" ]; then
-    export XBPS_CHROOT_CMD="uchroot"
-    export XBPS_CHROOT_CMD_ARGS+=" -O"
-fi
 #
 # Sanitize PATH.
 #
@@ -760,7 +785,10 @@ done
 if [ -z "$IN_CHROOT" ]; then
     trap 'exit_func' INT TERM
     if [ -n "$XBPS_DISTFILES_MIRROR" ]; then
-        setup_distfiles_mirror
+        setup_distfiles_mirror "$XBPS_DISTFILES_MIRROR"
+    fi
+    if [ -n "$XBPS_DISTFILES_FALLBACK" ]; then
+        setup_distfiles_mirror "$XBPS_DISTFILES_FALLBACK"
     fi
 fi
 
@@ -803,11 +831,13 @@ case "$XBPS_TARGET" in
         if [ -n "$CHROOT_READY" -a -z "$IN_CHROOT" ]; then
             chroot_handler bootstrap-update
         else
+            setup_env "$XBPS_CROSS_BUILD"
             chroot_sync_repodata
             update_base_chroot
         fi
         ;;
     chroot)
+        setup_env "$XBPS_CROSS_BUILD"
         chroot_sync_repodata
         chroot_handler chroot dummy
         ;;
@@ -841,8 +871,16 @@ case "$XBPS_TARGET" in
         fi
         ;;
     clean-repocache)
-        export XBPS_TARGET_ARCH="${XBPS_CROSS_BUILD:-$XBPS_TARGET_MACHINE}"
-        $XBPS_REMOVE_CMD -C /dev/null -c $XBPS_HOSTDIR/repocache-${XBPS_TARGET_ARCH} -O
+        if [ -n "$CHROOT_READY" -a -z "$IN_CHROOT" ]; then
+            chroot_handler $XBPS_TARGET $XBPS_TARGET_PKG || exit $?
+        else
+            if [ "$XBPS_CROSS_BUILD" ]; then
+                setup_env "$XBPS_CROSS_BUILD"
+                $XBPS_REMOVE_XCMD -c "$XBPS_HOSTDIR/repocache-${XBPS_TARGET_MACHINE}" -O
+            else
+                $XBPS_REMOVE_CMD -c "$XBPS_HOSTDIR/repocache-${XBPS_TARGET_MACHINE}" -O
+            fi
+        fi
         ;;
     consistency-check)
         consistency_check
@@ -862,6 +900,7 @@ case "$XBPS_TARGET" in
         if [ -n "$CHROOT_READY" -a -z "$IN_CHROOT" ]; then
             chroot_handler $XBPS_TARGET $XBPS_TARGET_PKG
         else
+            setup_env "$XBPS_CROSS_BUILD"
             check_existing_pkg
             chroot_sync_repodata
             # prevent update_base_chroot from removing the builddir/destdir
@@ -1007,16 +1046,18 @@ case "$XBPS_TARGET" in
         show_pkg_shlib_requires
         ;;
     show-var)
-        for f in ${XBPS_COMMONDIR}/environment/setup/*.sh; do
-            source $f
+        for f in "${XBPS_COMMONDIR}"/environment/setup/*.sh; do
+            source "$f"
         done
         if [ "$XBPS_CROSS_BUILD" ]; then
-            source ${XBPS_COMMONDIR}/cross-profiles/${XBPS_CROSS_BUILD}.sh
+            source "${XBPS_COMMONDIR}/cross-profiles/${XBPS_CROSS_BUILD}.sh"
         else
-            source ${XBPS_COMMONDIR}/build-profiles/${XBPS_MACHINE}.sh
+            source "${XBPS_COMMONDIR}/build-profiles/${XBPS_MACHINE}.sh"
         fi
-        eval value="\${$XBPS_TARGET_PKG}"
-        echo $value
+        shift 1
+        for f; do
+            echo "${!f}"
+        done
         ;;
     show-repo-updates)
         bulk_build

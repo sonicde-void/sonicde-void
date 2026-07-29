@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-settings-utils'
 pkgname=sonic-frameworks-settings-utils
-version=6.27.0
+version=6.28.0
 revision=1
 build_style=cmake
 build_helper=qemu
@@ -17,7 +17,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-settings-utils"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-settings-utils/archive/refs/tags/${version}.tar.gz"
-checksum=14ec6fc42198f76cad26cebc7bdd9b803a5bee29fdd1618454e3b94551ea3cdd
+checksum=75817a385db20d383414007677ff9a9813daba9256c9660679ed3f1c4435211d
 provides="kf6-kcmutils-${version}_${revision}"
 conflicts="kf6-kcmutils"
 replaces="kf6-kcmutils>=0"

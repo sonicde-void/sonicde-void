@@ -130,7 +130,7 @@ check_installed_pkg() {
 skip_check_step() {
     [ -z "$XBPS_CHECK_PKGS" ] ||
         [ "$XBPS_CROSS_BUILD" ] ||
-        [ "$make_check" = ci-skip  -a "$XBPS_BUILD_ENVIRONMENT" = sonicde-void-ci ] ||
+        [ "$make_check" = ci-skip  -a "$XBPS_BUILD_ENVIRONMENT" = void-packages-ci ] ||
         [ "$make_check" = extended -a "$XBPS_CHECK_PKGS" != full ] ||
         [ "$make_check" = no ]
 }
@@ -384,6 +384,8 @@ install_pkg_deps() {
         (
         curpkgdepname=$($XBPS_UHELPER_CMD getpkgname "$i" 2>/dev/null)
         setup_pkg $curpkgdepname
+        # do not check when building dependencies, except for "full" (-K)
+        [ "$XBPS_CHECK_PKGS" == full ] || unset XBPS_CHECK_PKGS
         exec env XBPS_DEPENDENCY=1 XBPS_BINPKG_EXISTS=1 XBPS_DEPENDS_CHAIN="$XBPS_DEPENDS_CHAIN, $sourcepkg(host)" \
             $XBPS_LIBEXECDIR/build.sh $sourcepkg $pkg $target $cross_prepare || exit $?
         ) || exit $?
@@ -397,6 +399,8 @@ install_pkg_deps() {
 
         curpkgdepname=$($XBPS_UHELPER_CMD getpkgname "$i" 2>/dev/null)
         setup_pkg $curpkgdepname $cross
+        # do not check when building dependencies, except for "full" (-K)
+        [ "$XBPS_CHECK_PKGS" == full ] || unset XBPS_CHECK_PKGS
         exec env XBPS_DEPENDENCY=1 XBPS_BINPKG_EXISTS=1 XBPS_DEPENDS_CHAIN="$XBPS_DEPENDS_CHAIN, $sourcepkg(${cross:-host})" \
             $XBPS_LIBEXECDIR/build.sh $sourcepkg $pkg $target $cross $cross_prepare || exit $?
         ) || exit $?
@@ -415,6 +419,8 @@ install_pkg_deps() {
             fi
         fi
         setup_pkg $curpkgdepname $cross
+        # do not check when building dependencies, except for "full" (-K)
+        [ "$XBPS_CHECK_PKGS" == full ] || unset XBPS_CHECK_PKGS
         exec env XBPS_DEPENDENCY=1 XBPS_BINPKG_EXISTS=1 XBPS_DEPENDS_CHAIN="$XBPS_DEPENDS_CHAIN, $sourcepkg(${cross:-host})" \
             $XBPS_LIBEXECDIR/build.sh $sourcepkg $pkg $target $cross $cross_prepare || exit $?
         ) || exit $?
