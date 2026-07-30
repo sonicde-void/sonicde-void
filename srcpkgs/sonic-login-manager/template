@@ -3,15 +3,18 @@ pkgname=sonic-login-manager
 version=6.7.3.2
 revision=1
 build_style=cmake
-configure_args=" -DKDE_INSTALL_LIBEXECDIR=libexec
- -DDBUS_CONFIG_FILENAME=plasma_org.freedesktop.DisplayManager.conf"
-hostmakedepends="pkg-config gettext qt6-tools qt6-base qt6-shadertools sonic-frameworks-cmake-modules"
-makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-settings-devel sonic-frameworks-dbus-devel sonic-frameworks-internationalization-devel
- sonic-frameworks-package-devel sonic-frameworks-app-info-devel qt6-base-private-devel qt6-declarative-devel qt6-qt5compat-devel
- qt6-shadertools-devel pam-devel libXau-devel xorg-server-devel sonic-frameworks-auth-devel
- sonic-frameworks-core-addons-devel sonic-frameworks-io-devel sonic-frameworks-quick-ui-devel
- sonic-frameworks-windowsystem-devel sonic-interface-libraries-devel layer-shell-qt-devel
- sonic-workspace-devel sonic-screen-library-devel"
+configure_args=" -DKDE_INSTALL_LIBEXECDIR=libexec -DSPLIT_BUILD=ON
+ -DCMAKE_INSTALL_SYSCONFDIR=/etc -DINSTALL_PAM_CONFIGURATION=OFF
+ -DDBUS_CONFIG_FILENAME=plasma_org.freedesktop.DisplayManager.conf
+ -DX_SERVER_EXECUTABLE=/usr/libexec/Xorg"
+hostmakedepends="pkg-config gettext qt6-tools qt6-base qt6-shadertools sonic-frameworks-cmake-modules xorg-server"
+makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-settings-devel sonic-frameworks-dbus-devel
+ sonic-frameworks-internationalization-devel sonic-frameworks-package-devel sonic-frameworks-app-info-devel
+ qt6-base-private-devel qt6-declarative-devel qt6-qt5compat-devel qt6-shadertools-devel pam-devel libXau-devel
+ xorg-server-devel sonic-frameworks-auth-devel sonic-frameworks-core-addons-devel sonic-frameworks-io-devel
+ sonic-frameworks-quick-ui-devel sonic-frameworks-windowsystem-devel sonic-interface-libraries-devel
+ layer-shell-qt-devel sonic-workspace-devel sonic-screen-library-devel libcap-devel"
+depends="libelogind"
 short_desc="Sonic Login Manager"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
@@ -19,3 +22,17 @@ homepage="https://github.com/Sonic-DE/sonic-login-manager"
 distfiles="https://github.com/Sonic-DE/sonic-login-manager/archive/refs/tags/${version}.tar.gz"
 checksum=214e60104ac80b45f17dc1122a2828357306351ab26ec050a5fe8741afbaf6f3
 provides="plasma-login-manager-${version}_${revision}"
+system_groups="soniclogin"
+system_accounts="soniclogin"
+soniclogin_pgroup="soniclogin"
+make_dirs="/var/log/sonic 0755 root root
+ /run/soniclogin 0711 soniclogin soniclogin"
+
+post_install() {
+    rm -rf ${DESTDIR}/etc/dinit.d
+    rm -rf ${DESTDIR}/etc/init.d
+    rm -rf ${DESTDIR}/etc/runit
+    rm -rf ${DESTDIR}/etc/s6
+    rm -rf ${DESTDIR}/etc/logrotate.d
+	vsv soniclogin
+}

@@ -4,7 +4,7 @@
 
 This third-party repository provides [SonicDE](https://sonicde.org) x86_64 binary packages for [Void Linux](https://voidlinux.org)-based distributions. SonicDE, or the Sonic Desktop Environment, aims to preserve and improve the X11-specific aspects of KDE. You can learn more about SonicDE at [sonicde.org](https://sonicde.org/).
 
-The packages of this repository are known to work with [Void Linux](https://voidlinux.org), [LazyLinux](https://lazylinuxos.github.io). The functionality needs to be verified on other derivatives.
+The packages of this repository are known to work with [Void Linux](https://voidlinux.org), [LazyLinux](https://lazylinuxos.github.io), [Neko Void](https://neko-void.sourceforge.io). The functionality needs to be verified on other derivatives.
 
 ## Installing SonicDE
 
