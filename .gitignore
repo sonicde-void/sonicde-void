@@ -20,6 +20,7 @@
 !/srcpkgs
 !/xbps-src
 !/docs
+!/scripts
 !/repo-keys
 !/99-repository-soncide.conf
 etc/conf

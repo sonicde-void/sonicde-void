@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-idle-tracker'
 pkgname=sonic-frameworks-idle-tracker
-version=6.28.0
+version=6.28.0.1
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-idle-tracker"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-idle-tracker/archive/refs/tags/${version}.tar.gz"
-checksum=f0b94eb4d6c539f8ac0e8ad2f3e0ff6daf0da767652d4e4dc84677ca69e02b48
+checksum=a1bd863306aa1a12d265fcca1ae685d4263bfb4192ddd255f11ea98e6a13df10
 provides="kf6-kidletime-${version}_${revision}"
 conflicts="kf6-kidletime"
 replaces="kf6-kidletime>=0"

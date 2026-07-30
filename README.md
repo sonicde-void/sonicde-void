@@ -38,7 +38,7 @@ The included packages will replace any of their installed KDE counterparts. When
 
 ### Manual build
 
-For manual build follow Void Linux official documentation: [void-packages](https://github.com/void-linux/void-packages):
+For manual build follow Void Linux official documentation: [void-packages](https://github.com/void-linux/void-packages).
 
 ## Getting in Contact
 

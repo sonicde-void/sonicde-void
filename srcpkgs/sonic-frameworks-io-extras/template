@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-io-extras'
 pkgname=sonic-frameworks-io-extras
-version=26.04.2
-revision=3
+version=26.07.70
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -22,7 +22,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-io-extras"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-io-extras/archive/refs/tags/${version}.tar.gz"
-checksum=c90470650067cf1482b50713fd1143ab90e434efba2c5a43683992de8724ba03
+checksum=0ca04d3e4c36407241166d1daec05e5f36ec1a83b416dabf61d624a829276863
 provides="kio-extras-${version}_${revision}"
 conflicts="kio-extras"
 replaces="kio-extras>=0"

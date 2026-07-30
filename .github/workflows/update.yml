@@ -1,0 +1,58 @@
+name: Check for updates
+run-name: "Automated update of ${{ github.ref_name }} by @${{ github.actor }}"
+
+on:
+  schedule:
+    - cron: '59 23 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-all:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/master' }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PULL_PUSH }}
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl git
+
+      - name: Install GitHub CLI
+        uses: cli/cli@v3
+
+      - name: Check for updates
+        id: check-updates
+        run: |
+          chmod +x scripts/check_updates.sh
+          ./scripts/check_updates.sh
+
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "has_updates=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No updates found"
+            echo "has_updates=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit updates
+        if: steps.check-updates.outputs.has_updates == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add srcpkgs
+          git commit -m "Automated update"
+
+      - name: Push updates
+        if: steps.check-updates.outputs.has_updates == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PULL_PUSH }}
+          branch: ${{ github.ref_name }}
