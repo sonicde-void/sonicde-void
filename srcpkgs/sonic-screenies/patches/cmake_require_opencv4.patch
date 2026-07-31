@@ -1,0 +1,13 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -91,8 +91,8 @@
+ find_package(FFmpeg REQUIRED COMPONENTS AVCODEC AVFORMAT AVUTIL SWSCALE)
+ find_package(PulseAudio REQUIRED)
+ find_package(PkgConfig REQUIRED)
+-pkg_check_modules(OPENCV REQUIRED IMPORTED_TARGET opencv5)
+-find_package(OpenCV 5 REQUIRED core imgproc)
++pkg_check_modules(OPENCV REQUIRED IMPORTED_TARGET opencv4)
++find_package(OpenCV 4.12 REQUIRED core imgproc)
+
+ ecm_find_qmlmodule(org.kde.kquickimageeditor)
+ find_package(KQuickImageEditor COMPONENTS)

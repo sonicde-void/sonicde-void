@@ -1,0 +1,32 @@
+# Template file for 'kf6-frameworkintegration'
+pkgname=kf6-frameworkintegration
+version=6.28.0
+revision=1
+build_style=cmake
+configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
+ -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+ -DKDE_INSTALL_LIBEXECDIR=libexec"
+hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base gettext
+ sonic-frameworks-package sonic-frameworks-settings"
+makedepends="sonic-frameworks-color-scheme-devel sonic-frameworks-settings-devel
+ sonic-frameworks-internationalization-devel sonic-frameworks-icon-themes-devel
+ sonic-frameworks-addons-downloader-devel sonic-frameworks-notifications-devel
+ sonic-frameworks-widgets-addons-devel sonic-frameworks-package-devel"
+short_desc="Framework to integrate applications with a KDE Workspace"
+maintainer="nerdyslacker <karyan40024@gmail.com>"
+license="LGPL-2.1-or-later"
+homepage="https://invent.kde.org/frameworks/frameworkintegration"
+distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname#kf6-}-${version}.tar.xz"
+checksum=7fdc1db8a5b4c41c7b7487e5e45bc68b0c56a45f182a6362d8bd55ae5f5cc474
+
+kf6-frameworkintegration-devel_package() {
+	depends="${sourcepkg}>=${version}_${revision}
+	 sonic-frameworks-color-scheme-devel sonic-frameworks-icon-themes-devel
+	 sonic-frameworks-widgets-addons-devel"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/cmake
+		vmove "usr/lib/*.so"
+	}
+}

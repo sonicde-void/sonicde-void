@@ -1891,7 +1891,7 @@ libKF6Attica.so.6 sonic-frameworks-open-collab-6.28.0_1
 libKF6Baloo.so.6 sonic-frameworks-file-search-6.28.0_1
 libKF6BalooEngine.so.6 sonic-frameworks-file-search-6.28.0_1
 libKF6BluezQt.so.6 sonic-frameworks-bluetooth-6.28.0_1
-libKF6Style.so.6 kf6-frameworkintegration-6.19.0_1
+libKF6Style.so.6 kf6-frameworkintegration-6.28.0_1
 libKF6Archive.so.6 sonic-frameworks-archive-6.28.0_1
 libKF6AuthCore.so.6 sonic-frameworks-auth-6.28.0_1
 libKF6Bookmarks.so.6 sonic-frameworks-bookmarks-6.28.0_1
