@@ -1,17 +1,17 @@
 # Template file for 'sonic-qt-theme-bridge'
 pkgname=sonic-qt-theme-bridge
 version=6.7.3
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="sonic-frameworks-cmake-modules pkg-config qt6-base qt6-tools gettext
  sonic-frameworks-settings plasma-wayland-protocols"
 makedepends="sonic-frameworks-io-devel sonic-frameworks-xml-gui-devel sonic-frameworks-status-notification-devel
- libXcursor-devel sonic-silver-qt5 qt6-base-private-devel qt6-declarative-devel sonic-frameworks-settings-devel
+ libXcursor-devel sonic-breeze-qt6 qt6-base-private-devel qt6-declarative-devel sonic-frameworks-settings-devel
  sonic-frameworks-settings-ui-devel sonic-frameworks-internationalization-devel sonic-frameworks-windowsystem-devel
  sonic-frameworks-gui-addons-devel sonic-frameworks-notifications-devel sonic-frameworks-icon-themes-devel"
-depends="noto-fonts-ttf font-hack-ttf sonic-silver-qt5 sonic-frameworks-quick-desktop-style"
+depends="noto-fonts-ttf font-hack-ttf sonic-breeze-qt6 sonic-frameworks-quick-desktop-style"
 short_desc="Qt platform theme integration plugins for Sonic Workspaces"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
