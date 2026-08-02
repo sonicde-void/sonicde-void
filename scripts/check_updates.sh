@@ -3,7 +3,7 @@
 set -euo pipefail
 
 OWNER="Sonic-DE"
-SRC_PKGS_DIR="../srcpkgs"
+SRC_PKGS_DIR="srcpkgs"
 
 for pkgdir in "$SRC_PKGS_DIR"/*; do
     [[ -d "$pkgdir" ]] || continue

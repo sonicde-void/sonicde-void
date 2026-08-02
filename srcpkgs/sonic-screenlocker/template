@@ -1,6 +1,6 @@
 # Template file for 'sonic-screenlocker'
 pkgname=sonic-screenlocker
-version=6.7.3.1
+version=6.7.3.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -20,7 +20,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-screenlocker"
 distfiles="https://github.com/Sonic-DE/sonic-screenlocker/archive/refs/tags/${version}.tar.gz"
-checksum=879e02730df2e0672d1ffc63f55a2839cb6ae20f283cf9cf940f572433eff99d
+checksum=d50aaff8042a795eb727ed53a9298a8aa91b79a408b71574f49073fd30a61abf
 provides="kscreenlocker-${version}_${revision}"
 conflicts="kscreenlocker"
 replaces="kscreenlocker>=0"

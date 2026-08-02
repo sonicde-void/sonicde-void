@@ -1,6 +1,6 @@
 # Template file for 'sonic-interface-libraries'
 pkgname=sonic-interface-libraries
-version=6.7.3
+version=6.7.3.2
 revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -21,7 +21,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-interface-libraries"
 distfiles="https://github.com/Sonic-DE/sonic-interface-libraries/archive/refs/tags/${version}.tar.gz"
-checksum=5e014c78b9cc9590db699c8b9ac73d5e5e24e0bbcf775cc66d95f7fcfeef067e
+checksum=42054d86dda4e49180ad82379af778564cc9a249ef519cdb925f4f4065a5242b
 provides="libplasma-${version}_${revision}"
 conflicts="libplasma"
 replaces="libplasma>=0"

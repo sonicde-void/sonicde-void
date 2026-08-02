@@ -1,6 +1,6 @@
 # Template file for 'sonic-screenies'
 pkgname=sonic-screenies
-version=6.7.3.1
+version=6.7.3.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake"
@@ -19,7 +19,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-screenies"
 distfiles="https://github.com/Sonic-DE/sonic-screenies/archive/refs/tags/${version}.tar.gz"
-checksum=cab20758f780b8c7434a8d88f2d96b556f125c6797d24b81a92745f4d3bc6741
+checksum=914ff8d32bf23e6f09ad6a6faba626a373396728123e0b93996b0d7afbeaa528
 provides="spectacle-${version}_${revision}"
 conflicts="spectacle"
 replaces="spectacle>=0"

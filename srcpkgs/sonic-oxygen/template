@@ -1,6 +1,6 @@
 # Template file for 'sonic-oxygen'
 pkgname=sonic-oxygen
-version=6.7.3
+version=6.7.3.1
 revision=1
 metapackage=yes
 depends="sonic-oxygen-qt5 sonic-oxygen-qt6"

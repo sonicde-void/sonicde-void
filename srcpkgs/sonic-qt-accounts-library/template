@@ -1,6 +1,6 @@
 # Template file for 'sonic-qt-accounts-library'
 pkgname=sonic-qt-accounts-library
-version=1.17.1
+version=1.17.2
 revision=1
 build_style=qmake
 configure_args="LIBDIR=/usr/lib .."
@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-qt-accounts-library"
 distfiles="https://github.com/Sonic-DE/sonic-qt-accounts-library/archive/refs/tags/${version}.tar.gz"
-checksum=91ca1418c88fa0cbf28b2d124c6a76b2da805947ea0b5bb83d058492b3b52c35
+checksum=6ab0a000dd494f52593f8233bba0643035ffbcacbd99c71947f20fe655f0ba55
 provides="libaccounts-qt-${version}_${revision}"
 conflicts="libaccounts-qt"
 replaces="libaccounts-qt>=0"
