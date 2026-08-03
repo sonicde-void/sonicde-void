@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-silver-icons'
 pkgname=sonic-frameworks-silver-icons
 version=6.28.0
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DINSTALL_HOST_TOOLS=ON"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-base qt6-tools python3-lxml libxml2"

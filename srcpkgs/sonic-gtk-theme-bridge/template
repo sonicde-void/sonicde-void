@@ -1,7 +1,7 @@
 # Template file for 'sonic-gtk-theme-bridge'
 pkgname=sonic-gtk-theme-bridge
 version=6.7.3
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins

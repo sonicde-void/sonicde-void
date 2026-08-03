@@ -1,7 +1,7 @@
 # Template file for 'sonic-login-manager'
 pkgname=sonic-login-manager
 version=6.7.3.2
-revision=1
+revision=2
 build_style=cmake
 configure_args=" -DKDE_INSTALL_LIBEXECDIR=libexec -DSPLIT_BUILD=ON
  -DCMAKE_INSTALL_SYSCONFDIR=/etc -DINSTALL_PAM_CONFIGURATION=OFF

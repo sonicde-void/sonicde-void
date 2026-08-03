@@ -1,7 +1,7 @@
 # Template file for 'sonic-breeze'
 pkgname=sonic-breeze
 version=6.7.3
-revision=1
+revision=2
 metapackage=yes
 depends="sonic-frameworks-silver-icons sonic-breeze-qt5 sonic-breeze-qt6"
 short_desc="Artwork, styles and assets for the Silver visual style of Sonic Desktop"

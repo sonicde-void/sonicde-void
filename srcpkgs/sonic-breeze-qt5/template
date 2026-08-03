@@ -1,7 +1,7 @@
 # Template file for 'sonic-breeze-qt5'
 pkgname=sonic-breeze-qt5
 version=6.7.3
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT6=OFF -DKF5_HOST_TOOLING=/usr/lib/cmake"
 hostmakedepends="sonic-frameworks-cmake-modules qt5-qmake qt5-host-tools
