@@ -9,16 +9,22 @@ on:
 jobs:
   update-all:
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/unstable' }}
-    env:
-      GH_TOKEN: ${{ github.token }}
 
     steps:
-      - name: Checkout repository
+      - name: Authenticate via app
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Checkout unstable branch
         uses: actions/checkout@v4
         with:
+          ref: unstable
           fetch-depth: 0
-          token: ${{ secrets.PULL_PUSH }}
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Check for updates
         id: check-updates
@@ -33,13 +39,15 @@ jobs:
             echo "has_updates=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Create update branch and commit
-        if: steps.update.outputs.has_updates == 'true'
+      - name: Commit and push changes
+        if: steps.check-updates.outputs.has_updates == 'true'
+        env:
+          GH_TOKEN: ${{ steps.reauth.outputs.token }}
         run: |
           BRANCH="automated-update-$(date +%Y%m%d-%H%M%S)"
 
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "${{ github.repository_owner }}[bot]"
+          git config user.email "${{ vars.APP_CLIENT_ID }}+${{ github.repository_owner }}[bot]@users.noreply.github.com"
 
           git checkout -b "$BRANCH"
 
@@ -48,17 +56,12 @@ jobs:
 
           echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
 
-      - name: Push update branch
-        if: steps.update.outputs.has_updates == 'true'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PULL_PUSH }}
-          branch: ${{ env.BRANCH }}
+          git push --set-upstream origin "$BRANCH"
 
-      - name: Create Pull Request
-        if: steps.update.outputs.has_updates == 'true'
+      - name: Create pull request
+        if: steps.check-updates.outputs.has_updates == 'true'
         env:
-          GH_TOKEN: ${{ secrets.PULL_PUSH }}
+          GH_TOKEN: ${{ steps.reauth.outputs.token }}
         run: |
           gh pr create \
             --base unstable \
