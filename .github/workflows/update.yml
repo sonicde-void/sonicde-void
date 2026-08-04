@@ -75,7 +75,7 @@ jobs:
       - name: Create pull request
         if: steps.check-updates.outputs.has_updates == 'true'
         env:
-          GH_TOKEN: ${{ steps.reauth.outputs.token }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           gh pr create \
             --base unstable \
