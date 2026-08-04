@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-quick-ui-addons'
 pkgname=sonic-frameworks-quick-ui-addons
-version=1.12.1
+version=1.13.1
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -19,7 +19,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-quick-ui-addons"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-quick-ui-addons/archive/refs/tags/${version}.tar.gz"
-checksum=d58bcd4f61c44d5da883bc8dbe4d1cf8c240b280bbea25f3abff19fae1dc06a9
+checksum=6a0950b7d3fe75760883577d913aa96d78848676a741cc3fd34f8088228d3f1a
 provides="kirigami-addons-${version}_${revision}"
 conflicts="kirigami-addons"
 replaces="kirigami-addons>=0"

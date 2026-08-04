@@ -1,7 +1,7 @@
 # Template file for 'sonic-qt-theme-bridge'
 pkgname=sonic-qt-theme-bridge
-version=6.7.3.1
-revision=2
+version=6.7.3.2
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -17,7 +17,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-qt-theme-bridge"
 distfiles="https://github.com/Sonic-DE/sonic-qt-theme-bridge/archive/refs/tags/${version}.tar.gz"
-checksum=7a193475d31fc5219dbb8cb81279b339f5f11354b30d1517e74c3219b3130244
+checksum=673337486e2465502159b2ca3262835338e5c30e5d5a990ae90db9948f1b0521
 provides="plasma-integration-${version}_${revision}"
 conflicts="plasma-integration"
 replaces="plasma-integration>=0"
