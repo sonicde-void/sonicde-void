@@ -17,6 +17,8 @@ on:
 jobs:
   update-all:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
 
     steps:
       - name: Authenticate via app
