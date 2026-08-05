@@ -5,8 +5,9 @@ revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF"
 hostmakedepends="sonic-frameworks-cmake-modules pkg-config gettext"
-makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-color-scheme-devel sonic-frameworks-settings-devel sonic-frameworks-core-addons-devel
- sonic-decoration-devel sonic-frameworks-gui-addons-devel sonic-frameworks-internationalization-devel sonic-frameworks-icon-themes-devel
+makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-color-scheme-devel
+ sonic-frameworks-settings-devel sonic-frameworks-core-addons-devel sonic-decoration-devel
+ sonic-frameworks-gui-addons-devel sonic-frameworks-internationalization-devel sonic-frameworks-icon-themes-devel
  sonic-frameworks-quick-ui-devel sonic-frameworks-widgets-addons-devel sonic-frameworks-windowsystem-devel
  qt6-base-devel qt6-declarative-devel qt6-svg-devel"
 depends="sonic-frameworks-silver-icons hicolor-icon-theme kf6-frameworkintegration xdg-utils"
@@ -16,3 +17,9 @@ license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-silver"
 distfiles="https://github.com/Sonic-DE/sonic-silver/archive/refs/tags/${version}.tar.gz"
 checksum=c86bbc31faf3c62359212e775f44bf9d79240663f9f6e80bd8d81acc6b5df528
+
+post_install() {
+	# Remove due to confict with sonic-frameworks-silver-icons
+	rm -rf ${DESTDIR}/usr/share/icons/silver
+	rm -rf ${DESTDIR}/usr/share/icons/silver-dark
+}
