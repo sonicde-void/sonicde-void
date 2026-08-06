@@ -1,6 +1,6 @@
 # Template file for 'sonic-ecco'
 pkgname=sonic-ecco
-version=26.04.3.1
+version=26.04.3.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -25,7 +25,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later OR GFDL-1.2-or-later"
 homepage="https://github.com/Sonic-DE/sonic-ecco"
 distfiles="https://github.com/Sonic-DE/sonic-ecco/archive/refs/tags/${version}.tar.gz"
-checksum=774b62ac0d2054c03bae1cca586115c57e44d37c94b4cf55e0a8262cdd38b45b
+checksum=3ff89da5033bdf4f88eb24b68f7bd8e66395b0587e3dfb971e70573f9b9941cc
 provides="dolphin-${version}_${revision}"
 conflicts="dolphin"
 replaces="dolphin>=0"

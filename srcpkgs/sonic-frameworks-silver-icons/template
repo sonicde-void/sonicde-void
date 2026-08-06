@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-silver-icons'
 pkgname=sonic-frameworks-silver-icons
-version=6.28.0
-revision=2
+version=6.28.0.4
+revision=1
 build_style=cmake
 configure_args="-DINSTALL_HOST_TOOLS=ON"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-base qt6-tools python3-lxml libxml2"
@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-silver-icons"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-silver-icons/archive/refs/tags/${version}.tar.gz"
-checksum=3d9574c785c9f2c514ede18e1bb35dc4c9a5e619b71ccd1251377a27c7397359
+checksum=672c30e47845c203bc9d842f9ba78506124909ef9640f5c1f37adaf94b1a71a5
 provides="breeze-icons-${version}_${revision}"
 conflicts="breeze-icons"
 replaces="breeze-icons>=0"

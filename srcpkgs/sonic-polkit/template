@@ -1,7 +1,7 @@
 # Template file for 'sonic-polkit'
 pkgname=sonic-polkit
-version=0.201.1
-revision=2
+version=0.201.2
+revision=1
 build_style=cmake
 configure_args="-DQT_MAJOR_VERSION=6"
 hostmakedepends="pkg-config qt6-tools qt6-base"
@@ -11,7 +11,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-polkit"
 distfiles="https://github.com/Sonic-DE/sonic-polkit/archive/refs/tags/${version}.tar.gz"
-checksum=ec325d7e9b2293380c2596f38c617f124d145577264e80d40713de780f5e8448
+checksum=22757af51dc38179936f6e5807eefaa01ba4d123c82319b150d8095027ff543e
 provides="polkit-qt6-${version}_${revision}"
 conflicts="polkit-qt6"
 replaces="polkit-qt6>=0"

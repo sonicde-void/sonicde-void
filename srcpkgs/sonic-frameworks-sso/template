@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-sso'
 pkgname=sonic-frameworks-sso
-version=8.61.1
+version=8.61.2
 revision=1
 build_style=qmake
 configure_args="LIBDIR=/usr/lib .."
@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-sso"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-sso/archive/refs/tags/${version}.tar.gz"
-checksum=26e831e4d1cfd8251aa3f8b59a6853062297a0ed9b822579518695b340a498fa
+checksum=5cebeff220471f43da15be393fe26487d73568960bf1fbb130add0aabf65fdbe
 provides="signond-${version}_${revision}"
 conflicts="signond"
 replaces="signond>=0"
