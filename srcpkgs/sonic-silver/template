@@ -1,6 +1,6 @@
 # Template file for 'sonic-silver'
 pkgname=sonic-silver
-version=6.7.3.1
+version=6.7.3.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF"
@@ -16,10 +16,4 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-silver"
 distfiles="https://github.com/Sonic-DE/sonic-silver/archive/refs/tags/${version}.tar.gz"
-checksum=c86bbc31faf3c62359212e775f44bf9d79240663f9f6e80bd8d81acc6b5df528
-
-post_install() {
-	# Remove due to confict with sonic-frameworks-silver-icons
-	rm -rf ${DESTDIR}/usr/share/icons/silver
-	rm -rf ${DESTDIR}/usr/share/icons/silver-dark
-}
+checksum=aef4419f52ed2ef58e9163d87531f175f81d66e55498c77493bdcee0d312c08c
