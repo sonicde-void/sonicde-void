@@ -1,13 +1,13 @@
 # Template file for 'sonicde-meta'
 pkgname=sonicde-meta
 version=6.7
-revision=7
+revision=8
 metapackage=yes
 depends="aurorae sonic-bluetooth-runtime sonic-silver sonic-silver-gtk flatpak-kcm
  sonic-activity-manager-daemon sonic-terminal-tools sonic-gtk-theme-bridge
  sonic-launcher-menu-edit sonic-pipewire sonic-rdp sonic-ssh-password-prompt
  sonic-system-stats sonic-frameworks-keyring-pam sonic-write-daemon milou
- ocean-sound-theme oxygen sonic-oxygen-sounds sonic-activities-stats
+ ocean-sound-theme sonic-oxygen sonic-oxygen-sounds sonic-activities-stats
  sonic-browser-integration sonic-disks sonic-firewall sonic-qt-theme-bridge
  plasma-keyboard sonic-system-monitor sonic-win sonic-thunderbolt sonic-vault
  sonic-polkit-agent powerdevil print-manager sonic-network-manager sonic-screen
