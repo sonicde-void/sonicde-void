@@ -1,7 +1,7 @@
 # Template file for 'sonic-breeze'
 pkgname=sonic-breeze
 version=6.7.3.2
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -10,9 +10,9 @@ hostmakedepends="sonic-frameworks-cmake-modules gettext qt6-base qt6-tools
 makedepends="sonic-frameworks-core-addons-devel sonic-frameworks-color-scheme-devel
  sonic-frameworks-settings-devel sonic-frameworks-gui-addons-devel sonic-frameworks-internationalization-devel
  sonic-frameworks-icon-themes-devel sonic-frameworks-windowsystem-devel sonic-frameworks-settings-utils-devel
- sonic-frameworks-quick-ui-devel kf6-frameworkintegration-devel fftw-devel
+ sonic-frameworks-quick-ui-devel sonic-frameworks-qt-integration-devel fftw-devel
  qt6-svg-devel sonic-decoration-devel python3-cairo-devel"
-depends="sonic-frameworks-silver-icons kf6-frameworkintegration"
+depends="sonic-frameworks-silver-icons"
 short_desc="Artwork, styles and assets for the Silver visual style of Sonic Desktop"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
