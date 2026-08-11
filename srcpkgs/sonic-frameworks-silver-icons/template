@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-silver-icons'
 pkgname=sonic-frameworks-silver-icons
 version=6.28.0.4
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DINSTALL_HOST_TOOLS=ON"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-base qt6-tools python3-lxml libxml2"
@@ -13,9 +13,6 @@ license="LGPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-silver-icons"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-silver-icons/archive/refs/tags/${version}.tar.gz"
 checksum=672c30e47845c203bc9d842f9ba78506124909ef9640f5c1f37adaf94b1a71a5
-provides="breeze-icons-${version}_${revision}"
-conflicts="breeze-icons"
-replaces="breeze-icons>=0"
 nostrip=yes
 
 if [ -z "$CROSS_BUILD" ]; then
@@ -26,19 +23,13 @@ else
 fi
 
 sonic-frameworks-silver-icons-library_package() {
-	provides="libbreeze-icons-${version}_${revision}"
-	conflicts="libbreeze-icons"
-	replaces="libbreeze-icons>=0"
 	pkg_install() {
 		vmove "usr/lib/*.so.*"
 	}
 }
 
 sonic-frameworks-silver-icons-library-devel_package() {
-	provides="libbreeze-icons-devel-${version}_${revision}"
-	conflicts="libbreeze-icons-devel"
-	replaces="libbreeze-icons-devel>=0"
-	depends="libbreeze-icons>=${version}_${revision}"
+	depends="sonic-frameworks-silver-icons-library>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
 		if [ -z "$CROSS_BUILD" ]; then
