@@ -1,7 +1,7 @@
 # Template file for 'sonic-silver-gtk'
 pkgname=sonic-silver-gtk
-version=6.7.3.1
-revision=2
+version=6.7.4
+revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules sassc python3 python3-cairo
  qt6-base qt6-tools"
@@ -11,7 +11,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-silver-gtk"
 distfiles="https://github.com/Sonic-DE/sonic-silver-gtk/archive/refs/tags/${version}.tar.gz"
-checksum=30ad4ea28ec1e02666eda04a0f517bbaaac29936252b9f3fa184a675bcf36c48
+checksum=6915b3aaaa1e9eaf9dbc9117d21b938ccf955ba1352b3f220f8e19fd8f20f12b
 provides="breeze-gtk-${version}_${revision}"
 conflicts="breeze-gtk"
 replaces="breeze-gtk>=0"

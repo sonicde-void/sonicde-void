@@ -1,6 +1,6 @@
 # Template file for 'sonic-thunderbolt'
 pkgname=sonic-thunderbolt
-version=6.7.3
+version=6.7.4
 revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -15,7 +15,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-thunderbolt"
 distfiles="https://github.com/Sonic-DE/sonic-thunderbolt/archive/refs/tags/${version}.tar.gz"
-checksum=0e9e0b1a399ae7e8f74a92c2fbd5eb494be0d400c34168b0694bfff0418306f8
+checksum=e940a1c2fe1c19b38340904c990fbe66a7624616bc0ba347a3ad6fdfa5963d8d
 provides="plasma-thunderbolt-${version}_${revision}"
 conflicts="plasma-thunderbolt"
 replaces="plasma-thunderbolt>=0"
