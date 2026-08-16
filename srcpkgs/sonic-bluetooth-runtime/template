@@ -1,6 +1,6 @@
 # Template file for 'sonic-bluetooth-runtime'
 pkgname=sonic-bluetooth-runtime
-version=6.7.3
+version=6.7.4
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-bluetooth-runtime"
 distfiles="https://github.com/Sonic-DE/sonic-bluetooth-runtime/archive/refs/tags/${version}.tar.gz"
-checksum=27dd29c4b79926fb4292976a98e05400a54f129a0182afbcb87a8bc6ca4684af
+checksum=d74996463d798e8361eb1c4fa039317e5ff26e575c110d44eab5665d93897aa6
 provides="bluedevil-${version}_${revision}"
 conflicts="bluedevil"
 replaces="bluedevil>=0"

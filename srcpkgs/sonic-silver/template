@@ -1,7 +1,7 @@
 # Template file for 'sonic-silver'
 pkgname=sonic-silver
-version=6.7.3.2
-revision=2
+version=6.7.4.1
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF"
 hostmakedepends="sonic-frameworks-cmake-modules pkg-config gettext"
@@ -16,4 +16,4 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-silver"
 distfiles="https://github.com/Sonic-DE/sonic-silver/archive/refs/tags/${version}.tar.gz"
-checksum=aef4419f52ed2ef58e9163d87531f175f81d66e55498c77493bdcee0d312c08c
+checksum=cc304e03141272f24bc127604f39316d4ff46de64b1599f1037a7097b6211346

@@ -1,6 +1,6 @@
 # Template file for 'sonic-plasma5-support-library'
 pkgname=sonic-plasma5-support-library
-version=6.7.3
+version=6.7.4
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-plasma5-support-library"
 distfiles="https://github.com/Sonic-DE/sonic-plasma5-support-library/archive/refs/tags/${version}.tar.gz"
-checksum=6f91226d18078d5e65a6cb921fdc89ee6e4f8ed425231739dfe0c10d77f686af
+checksum=16a64b8678b31e82479f7c2705de21a1429e9509a6133ba7b388a90e4d168a8f
 provides="plasma5support-${version}_${revision}"
 conflicts="plasma5support"
 replaces="plasma5support>=0"

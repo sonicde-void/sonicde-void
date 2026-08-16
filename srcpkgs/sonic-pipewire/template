@@ -1,6 +1,6 @@
 # Template file for 'sonic-pipewire'
 pkgname=sonic-pipewire
-version=6.7.3
+version=6.7.4
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml"
@@ -15,7 +15,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-pipewire"
 distfiles="https://github.com/Sonic-DE/sonic-pipewire/archive/refs/tags/${version}.tar.gz"
-checksum=ed54a7f81a6d2f514c0ce8d2ac2db0517355ab2e71c14d329ed857a47cda7117
+checksum=7dada2803e10501af8b64eff16048409fc346b9883a8f58042e135341afc6558
 provides="kpipewire-${version}_${revision}"
 conflicts="kpipewire"
 replaces="kpipewire>=0"

@@ -1,6 +1,6 @@
 # Template file for 'sonic-rdp'
 pkgname=sonic-rdp
-version=6.7.3
+version=6.7.4
 revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-rdp"
 distfiles="https://github.com/Sonic-DE/sonic-rdp/archive/refs/tags/${version}.tar.gz"
-checksum=ec1efdf6c3ccbecbf64c55803e3740cbe3ba6b0571403a531845ed36f4935015
+checksum=b24a044edeec01e3bb0f26b58a8afc3c88ba8f13e9badf8b34e7fc4bee781d67
 provides="krdp-${version}_${revision}"
 conflicts="krdp"
 replaces="krdp>=0"

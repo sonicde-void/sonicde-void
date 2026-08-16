@@ -1,6 +1,6 @@
 # Template file for 'sonic-oxygen-sounds'
 pkgname=sonic-oxygen-sounds
-version=6.7.3
+version=6.7.4
 revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules"
@@ -9,7 +9,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-oxygen-sounds"
 distfiles="https://github.com/Sonic-DE/sonic-oxygen-sounds/archive/refs/tags/${version}.tar.gz"
-checksum=bd34cdc364be467ffde83e13701f0a2b12105f574d61244405df77fa2df907aa
+checksum=c583c1f5109e71637ed1d85e8ed3e0de60966b358cba78334ebf9b01c3845e5c
 provides="oxygen-sounds-${version}_${revision}"
 conflicts="oxygen-sounds"
 replaces="oxygen-sounds>=0"
