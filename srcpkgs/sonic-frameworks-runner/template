@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-runner'
 pkgname=sonic-frameworks-runner
-version=6.28.0
+version=6.29.0
 revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules sonic-frameworks-doctools qt6-tools qt6-base
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-only, LGPL-3.0-only"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-runner"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-runner/archive/refs/tags/${version}.tar.gz"
-checksum=075803b0645516069ca6842bf13d4b7509c74a12a6634bbc38482bc599681cd9
+checksum=82e097211dc25d57eb6feef26ed05c53f89b66cba26a94b70152bd1058c2156a
 provides="kf6-krunner-${version}_${revision}"
 conflicts="kf6-krunner"
 replaces="kf6-krunner>=0"

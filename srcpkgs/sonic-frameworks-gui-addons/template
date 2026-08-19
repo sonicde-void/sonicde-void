@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-gui-addons'
 pkgname=sonic-frameworks-gui-addons
-version=6.28.0
+version=6.29.0
 revision=1
 build_style=cmake
 _llvmver=21
@@ -17,7 +17,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-only OR LGPL-3.0-only"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-gui-addons"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-gui-addons/archive/refs/tags/${version}.tar.gz"
-checksum=ec2334273c1096c3a9c1199e0a234258810aa406027eb7e698f12bc4b39b1397
+checksum=339f7da21289a6da39d1a6ae647fee558ed60aabf1568a71125c2ea6d077446d
 provides="kf6-kguiaddons-${version}_${revision}"
 conflicts="kf6-kguiaddons"
 replaces="kf6-kguiaddons>=0"

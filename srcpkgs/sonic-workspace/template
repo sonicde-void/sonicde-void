@@ -1,6 +1,6 @@
 # Template file for 'sonic-workspace'
 pkgname=sonic-workspace
-version=6.7.4.4
+version=6.7.4.5
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -34,7 +34,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-workspace"
 distfiles="https://github.com/Sonic-DE/sonic-workspace/archive/refs/tags/${version}.tar.gz"
-checksum=7e252254b4ffad1b59effa8b9f4aa8b12d325ee76f91c22205567cefb9b5398c
+checksum=00c5f7467c28881c4a8be5bcadfadfaea348cfc9fcd28fb858973cce851b2bcd
 provides="plasma-workspace-${version}_${revision}"
 conflicts="plasma-workspace"
 replaces="plasma-workspace>=0"

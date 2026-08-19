@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-file-metadata'
 pkgname=sonic-frameworks-file-metadata
-version=6.28.0
+version=6.29.0
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-file-metadata"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-file-metadata/archive/refs/tags/${version}.tar.gz"
-checksum=3c58b4d4884d3f5cd757fdd20ffa27ef2f689a3a2b4dcff74b889451f28bc4e2
+checksum=226077862fd0044a42b15d54e80edbb6a76aecf0c6e73d2c9ff0a029986ce21c
 provides="kf6-kfilemetadata-${version}_${revision}"
 conflicts="kf6-kfilemetadata"
 replaces="kf6-kfilemetadata>=0"
