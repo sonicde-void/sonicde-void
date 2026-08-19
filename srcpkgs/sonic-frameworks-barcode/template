@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-barcode'
 pkgname=sonic-frameworks-barcode
-version=6.28.0
+version=6.29.0
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml"
@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-barcode"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-barcode/archive/refs/tags/${version}.tar.gz"
-checksum=844ae9502f1af713b9a47eb3d82205827482843fc5b4d1d835ff7c9c852009ea
+checksum=68cdc4ba255e8277a5d5616905043f0c3939cb7bd96a5049001e744c59b5beea
 provides="kf6-prison-${version}_${revision}"
 conflicts="kf6-prison"
 replaces="kf6-prison>=0"

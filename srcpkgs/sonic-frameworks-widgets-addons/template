@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-widgets-addons'
 pkgname=sonic-frameworks-widgets-addons
-version=6.28.0
+version=6.29.0
 revision=1
 _llvmver=21
 build_style=cmake
@@ -15,7 +15,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-widgets-addons"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-widgets-addons/archive/refs/tags/${version}.tar.gz"
-checksum=c31d00b7452d105b2da022c96eb8ac0fa127cb3686a78bd45799e224ddbea398
+checksum=6d68bc48a2e9508aa1647ba0e8c7025eaae11ce1be1e86577d301e39fcae3a7d
 provides="kf6-kwidgetsaddons-${version}_${revision}"
 conflicts="kf6-kwidgetsaddons"
 replaces="kf6-kwidgetsaddons>=0"

@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-settings'
 pkgname=sonic-frameworks-settings
-version=6.28.0
+version=6.29.0
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-settings"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-settings/archive/refs/tags/${version}.tar.gz"
-checksum=07f5f22ef182921c478cf494aa016274fae30ec19fa01dbddb7eccc9ed1b6ff8
+checksum=c3d0bc774b84c0aca2c0fc8b0ee3a0c55244b674e9b419ed88969d3e961b77bd
 provides="kf6-kconfig-${version}_${revision}"
 conflicts="kf6-kconfig"
 replaces="kf6-kconfig>=0"
