@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-bookmarks'
 pkgname=sonic-frameworks-bookmarks
 version=6.29.0
-revision=1
+revision=2
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base sonic-frameworks-settings"
 makedepends="sonic-frameworks-settings-devel qt6-base-devel sonic-frameworks-core-addons-devel

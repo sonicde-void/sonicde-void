@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-archive'
 pkgname=sonic-frameworks-archive
 version=6.29.0
-revision=1
+revision=2
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base pkg-config"
 makedepends="qt6-base-devel zlib-devel bzip2-devel liblzma-devel libzstd-devel"

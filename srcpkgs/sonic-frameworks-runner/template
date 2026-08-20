@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-runner'
 pkgname=sonic-frameworks-runner
 version=6.29.0
-revision=1
+revision=2
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules sonic-frameworks-doctools qt6-tools qt6-base
  sonic-frameworks-settings gettext doxygen"
