@@ -1,7 +1,7 @@
 # Template file for 'sonic-daemon'
 pkgname=sonic-daemon
 version=6.29.0
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base
