@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-user-feedback'
 pkgname=sonic-frameworks-user-feedback
 version=6.29.0
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DECM_MKSPECS_INSTALL_DIR=/usr/lib/qt6/mkspecs/modules

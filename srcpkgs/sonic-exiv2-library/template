@@ -1,7 +1,7 @@
 # Template file for 'sonic-exiv2-library'
 pkgname=sonic-exiv2-library
 version=26.04.3
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DQT_MAJOR_VERSION=6"
 hostmakedepends="sonic-frameworks-cmake-modules pkg-config qt6-base qt6-tools"

@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-pseudo-terminal'
 pkgname=sonic-frameworks-pseudo-terminal
 version=6.29.0
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DUTEMPTER_EXECUTABLE=/usr/lib/utempter/utempter"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base

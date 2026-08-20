@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-data-views'
 pkgname=sonic-frameworks-data-views
 version=6.29.0
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DBUILD_DESIGNERPLUGIN=ON -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base"

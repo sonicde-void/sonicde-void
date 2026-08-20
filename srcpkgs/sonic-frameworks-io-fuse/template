@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-io-fuse'
 pkgname=sonic-frameworks-io-fuse
 version=6.0.0
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DQT_MAJOR_VERSION=6 -DBUILD_WITH_QT6=ON -DKDE_INSTALL_LIBEXECDIR=libexec"
 hostmakedepends="sonic-frameworks-cmake-modules pkg-config qt6-base sonic-frameworks-settings-devel"
