@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-quick-ui'
 pkgname=sonic-frameworks-quick-ui
-version=6.29.0.1
-revision=2
+version=6.29.0.2
+revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-only OR LGPL-3.0-only"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-quick-ui"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-quick-ui/archive/refs/tags/${version}.tar.gz"
-checksum=a092bbe4e0ad919e973ece9d0ba54c1f51013ae86d63fb1a7ddfd5a88b9d3b67
+checksum=cc4ada196bc0aab34490f6a0006dd7ecf4aa90977a91251fcae5e0d88b1b6af9
 provides="kf6-kirigami-${version}_${revision}"
 conflicts="kf6-kirigami"
 replaces="kf6-kirigami>=0"
