@@ -1990,9 +1990,9 @@ libKF6ThreadWeaver.so.6 kf6-threadweaver-6.19.0_1
 # SonicDE
 libKQuickImageEditor.so.1 sonic-quick-image-editor-0.6.2.1.1_1
 libKNightTime.so.0 sonic-night-light-6.7.4_1
-libklookandfeel.so.6 sonic-workspace-6.7.4.4_1
-libtaskmanager.so.6 sonic-workspace-6.7.4.4_1
-libnotificationmanager.so.1 sonic-workspace-6.7.4.4_1
+libklookandfeel.so.6 sonic-workspace-6.7.4.6_1
+libtaskmanager.so.6 sonic-workspace-6.7.4.6_1
+libnotificationmanager.so.1 sonic-workspace-6.7.4.6_1
 libKF6Screen.so.8 sonic-screen-library-6.7.4_1
 libKF6ScreenDpms.so.8 sonic-screen-library-6.7.4_1
 libKWaylandClient.so.6 kf6-kwayland-6.5.1_1
@@ -2003,7 +2003,7 @@ libKSysGuardSensorFaces.so.2 sonic-system-monitor-library-6.7.4_1
 libprocesscore.so.11 sonic-system-monitor-library-6.7.4_1
 libKSysGuardSystemStats.so.2 sonic-system-monitor-library-6.7.4_1
 libKSysGuardSensors.so.2 sonic-system-monitor-library-6.7.4_1
-libkworkspace6.so.6 sonic-workspace-6.7.4.4_1
+libkworkspace6.so.6 sonic-workspace-6.7.4.6_1
 libKPipeWire.so.6 sonic-pipewire-6.7.4_1
 libKPipeWireRecord.so.6 sonic-pipewire-6.7.4_1
 libKPipeWireDmaBuf.so.6 sonic-pipewire-6.7.4_1
