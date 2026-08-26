@@ -1,7 +1,7 @@
 # Template file for 'sonic-breeze'
 pkgname=sonic-breeze
-version=6.7.4.2
-revision=2
+version=6.7.4.5
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-breeze"
 distfiles="https://github.com/Sonic-DE/sonic-breeze/archive/refs/tags/${version}.tar.gz"
-checksum=5db64f324d534e5ca28162d49ef2757494f60e942aec57436ffc1187f9912298
+checksum=1c0e17621e8135c668ee0d6c1e69ab2b6d2db1aec4801f72eceaea0a2ee7a749
 provides="breeze-${version}_${revision}"
 conflicts="breeze breeze-qt6"
 replaces="breeze>=0 breeze-qt6>=0"
