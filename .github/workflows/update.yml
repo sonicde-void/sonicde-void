@@ -3,7 +3,7 @@ run-name: "Automated update @${{ github.repository_owner }}[bot]"
 
 on:
   schedule:
-    - cron: '59 23 * * 6'
+    - cron: '59 23 * * 5'
   workflow_dispatch:
   workflow_call:
     inputs:
