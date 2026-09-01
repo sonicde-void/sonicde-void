@@ -1,6 +1,6 @@
 # Template file for 'sonic-breeze'
 pkgname=sonic-breeze
-version=6.7.4.6
+version=6.7.4.7
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-breeze"
 distfiles="https://github.com/Sonic-DE/sonic-breeze/archive/refs/tags/${version}.tar.gz"
-checksum=e9349076cefca58a47127f79b0afbe32883778af07d4dd73b3bdfd412ce0d427
+checksum=a981e72def36096a2da425060e7ee0ea55644bb773495bf9899ee3609764b5c5
 provides="breeze-${version}_${revision}"
 conflicts="breeze breeze-qt6"
 replaces="breeze>=0 breeze-qt6>=0"
