@@ -1,7 +1,7 @@
 # Template file for 'sonic-vault'
 pkgname=sonic-vault
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -15,7 +15,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-vault"
 distfiles="https://github.com/Sonic-DE/sonic-vault/archive/refs/tags/${version}.tar.gz"
-checksum=4147f2f9ee95d89caf0e78eae105921276f0ffa5abcb9b0710abf69c67c7ccca
+checksum=1dce56d3ac61e4b8323c853f8213f1aaec30310c24fea7da7895b8c67db8bb24
 provides="plasma-vault-${version}_${revision}"
 conflicts="plasma-vault"
 replaces="plasma-vault>=0"

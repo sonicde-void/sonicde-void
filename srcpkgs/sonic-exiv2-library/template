@@ -1,7 +1,7 @@
 # Template file for 'sonic-exiv2-library'
 pkgname=sonic-exiv2-library
-version=26.04.3
-revision=2
+version=26.08.0
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DQT_MAJOR_VERSION=6"
 hostmakedepends="sonic-frameworks-cmake-modules pkg-config qt6-base qt6-tools"
@@ -11,7 +11,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-exiv2-library"
 distfiles="https://github.com/Sonic-DE/sonic-exiv2-library/archive/refs/tags/${version}.tar.gz"
-checksum=84b75a4d17e61f7069c8957ba2c88d3e71371df6371460fd5539fdca5dae63a9
+checksum=3f89d41990ad84e1647df33dd519d65a7a6f0655d0f3756ce4c85357b6dcc069
 provides="libkexiv2-${version}_${revision}"
 conflicts="libkexiv2"
 replaces="libkexiv2>=0"

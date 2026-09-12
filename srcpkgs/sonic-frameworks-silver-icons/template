@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-silver-icons'
 pkgname=sonic-frameworks-silver-icons
-version=6.29.0.1
+version=6.30.0
 revision=1
 build_style=cmake
 configure_args="-DINSTALL_HOST_TOOLS=ON"
@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-silver-icons"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-silver-icons/archive/refs/tags/${version}.tar.gz"
-checksum=af68b35b4f08ec6a83d8522ffffa840bdda71f6ef877d109265225e53b3c1250
+checksum=96f6b657a70851c3ffb2f43fd1b8687d4c43f9f63c5cdbfb211eb9cd8ef49ac7
 nostrip=yes
 
 if [ -z "$CROSS_BUILD" ]; then

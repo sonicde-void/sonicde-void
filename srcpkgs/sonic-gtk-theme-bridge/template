@@ -1,7 +1,7 @@
 # Template file for 'sonic-gtk-theme-bridge'
 pkgname=sonic-gtk-theme-bridge
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-gtk-theme-bridge"
 distfiles="https://github.com/Sonic-DE/sonic-gtk-theme-bridge/archive/refs/tags/${version}.tar.gz"
-checksum=c75dc18e367c5eda1fd0ce090297e851bc79b1badc742f66bc7f577bc6efb307
+checksum=fc6b34d7466f37c45cf7af2d0ffd17d40291684239ad60331bf73353db764980
 provides="kde-gtk-config-${version}_${revision}"
 conflicts="kde-gtk-config"
 replaces="kde-gtk-config>=0"

@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-widgets-addons'
 pkgname=sonic-frameworks-widgets-addons
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 _llvmver=21
 build_style=cmake
 configure_args="-DBUILD_DESIGNERPLUGIN=ON -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -15,7 +15,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-widgets-addons"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-widgets-addons/archive/refs/tags/${version}.tar.gz"
-checksum=6d68bc48a2e9508aa1647ba0e8c7025eaae11ce1be1e86577d301e39fcae3a7d
+checksum=1a821face8f08a7b4732e5de0396e09c3f3ba36270cea452ec0865273035923a
 provides="kf6-kwidgetsaddons-${version}_${revision}"
 conflicts="kf6-kwidgetsaddons"
 replaces="kf6-kwidgetsaddons>=0"

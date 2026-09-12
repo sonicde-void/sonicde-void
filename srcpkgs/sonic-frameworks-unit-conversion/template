@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-unit-conversion'
 pkgname=sonic-frameworks-unit-conversion
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 _llvmver=21
 build_style=cmake
 configure_args="$(vopt_bool python BUILD_PYTHON_BINDINGS)"
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-unit-conversion"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-unit-conversion/archive/refs/tags/${version}.tar.gz"
-checksum=75caea8f1f1d501a28d3451731686a6185e2fb039cdde747d3ed530a6f5a2bd0
+checksum=3c0e20451d59d3efe120e9e7625e193719ed176bc5279614ecdb3bd1798130e3
 provides="kf6-kunitconversion-${version}_${revision}"
 conflicts="kf6-kunitconversion"
 replaces="kf6-kunitconversion>=0"

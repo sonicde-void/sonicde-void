@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-quick-charts'
 pkgname=sonic-frameworks-quick-charts
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-quick-charts"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-quick-charts/archive/refs/tags/${version}.tar.gz"
-checksum=f64f90c5f4c0661319e86434ebde9028c3c0492c2d76a3c5cab2f912d4f46025
+checksum=0c29b16bcad2db675e8958d668968e4debef4fc6956ef6f90773266e2ce9ac48
 provides="kf6-kquickcharts-${version}_${revision}"
 conflicts="kf6-kquickcharts"
 replaces="kf6-kquickcharts>=0"

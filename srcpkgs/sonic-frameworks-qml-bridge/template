@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-qml-bridge'
 pkgname=sonic-frameworks-qml-bridge
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-qml-bridge"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-qml-bridge/archive/refs/tags/${version}.tar.gz"
-checksum=ea3ab71d073e54dd107a88aef1d58082136c4c4f2e10da7bba291e78a9c9b393
+checksum=a7b072e967e678be416bf264694403e0ac131660c5ce8fadc385dd29b27546de
 provides="kf6-kdeclarative-${version}_${revision}"
 conflicts="kf6-kdeclarative"
 replaces="kf6-kdeclarative>=0"

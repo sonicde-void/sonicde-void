@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-notifications'
 pkgname=sonic-frameworks-notifications
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 _llvmver=21
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-notifications"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-notifications/archive/refs/tags/${version}.tar.gz"
-checksum=0802fe80c51b3a56b9081e3285803af3214721ba363a695ad638d0b5ea6d622f
+checksum=1de8f37514d0160c4e44b4d3b8ffa21651c03ec50e74a33f577ef7518d42c9eb
 provides="kf6-knotifications-${version}_${revision}"
 conflicts="kf6-knotifications"
 replaces="kf6-knotifications>=0"

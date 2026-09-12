@@ -1,7 +1,7 @@
 # Template file for 'sonic-audio-applet-pulse'
 pkgname=sonic-audio-applet-pulse
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-audio-applet-pulse"
 distfiles="https://github.com/Sonic-DE/sonic-audio-applet-pulse/archive/refs/tags/${version}.tar.gz"
-checksum=73440f7eb71e4d1af27f3c928f052e5a2f205372441b0654c6ceed167ab73ce4
+checksum=051dd160983d956f7ea5e303289d7862794fe8f60cbb73fd8c0efff8b42edf3b
 provides="plasma-pa-${version}_${revision}"
 conflicts="plasma-pa"
 replaces="plasma-pa>=0"

@@ -1,7 +1,7 @@
 # Template file for 'sonic-workspace-wallpapers'
 pkgname=sonic-workspace-wallpapers
-version=6.7.4.1
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
 hostmakedepends="sonic-frameworks-cmake-modules"
@@ -10,7 +10,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-workspace-wallpapers"
 distfiles="https://github.com/Sonic-DE/sonic-workspace-wallpapers/archive/refs/tags/${version}.tar.gz"
-checksum=5ef63972b620f5d1cfb96cfe41e5830e4c0def0e285b966889ca7a61b0d14859
+checksum=07ed58304b956151020c8f7ea71e196c959e67b447fd34bdcc877d8a0ff64d76
 provides="sonic-workspace-wallpapers-${version}_${revision}"
 conflicts="sonic-workspace-wallpapers"
 replaces="sonic-workspace-wallpapers>=0"

@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-doctools'
 pkgname=sonic-frameworks-doctools
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 build_helper=qemu
 hostmakedepends="doxygen docbook-xml docbook-xsl qt6-tools qt6-base gettext perl perl-URI sonic-frameworks-cmake-modules"
@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-only OR LGPL-3.0-only"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-doctools"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-doctools/archive/refs/tags/${version}.tar.gz"
-checksum=6fc375546fe46591919e4db4a07e93499da7464a6c642731bb4b8cc7cbf8331a
+checksum=5c60df651c5aa95aaa66c89989b479e1a47d7edb464c62a5b91abb3bc600999a
 provides="kf6-kdoctools-${version}_${revision}"
 conflicts="kf6-kdoctools"
 replaces="kf6-kdoctools>=0"

@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-text-codec'
 pkgname=sonic-frameworks-text-codec
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base gperf"
 makedepends="qt6-base-devel"
@@ -10,7 +10,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-text-codec"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-text-codec/archive/refs/tags/${version}.tar.gz"
-checksum=9634b14b621a60ab129f25ac9bda1b3121de392c071f8dfc6fc197e0e83a4205
+checksum=2a2000f7b4891d7cdf463e28bca3cccc22def3d7700e0d738387aae31677892c
 provides="kf6-kcodecs-${version}_${revision}"
 conflicts="kf6-kcodecs"
 replaces="kf6-kcodecs>=0"

@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-addons-downloader'
 pkgname=sonic-frameworks-addons-downloader
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -15,7 +15,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-addons-downloader"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-addons-downloader/archive/refs/tags/${version}.tar.gz"
-checksum=7362a1cde46d428561b3286a21fe0e80aa00548aaccaaf9596748695da6c3616
+checksum=4a79193be74f213bee10aac45896d057854d5a1952cace884193b85acc74efcb
 provides="kf6-knewstuff-${version}_${revision}"
 conflicts="kf6-knewstuff"
 replaces="kf6-knewstuff>=0"

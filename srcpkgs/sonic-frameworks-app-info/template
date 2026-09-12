@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-app-info'
 pkgname=sonic-frameworks-app-info
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base
@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-app-info"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-app-info/archive/refs/tags/${version}.tar.gz"
-checksum=4ea8562ecf2e4d7854c3b68001584156fe84a9ea1e8c7b0774d27f279b6151ce
+checksum=94bd46b4bb89faf3dc74c12326b10e0c2dabc8123db04679bb959af8776a52b3
 provides="kf6-kservice-${version}_${revision}"
 conflicts="kf6-kservice"
 replaces="kf6-kservice>=0"

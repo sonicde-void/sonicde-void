@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-modemmanager'
 pkgname=sonic-frameworks-modemmanager
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base
  pkg-config"
@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-modemmanager"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-modemmanager/archive/refs/tags/${version}.tar.gz"
-checksum=e19896a28ef79c83727ff2426f206e323137b0f072943ca694f2cc37a6a17293
+checksum=2b2af2b0d42b923e01c4a0d22d5af9b1b284ef5ae533bb01f1acee90a9a5154e
 provides="kf6-modemmanager-qt-${version}_${revision}"
 conflicts="kf6-modemmanager-qt"
 replaces="kf6-modemmanager-qt>=0"

@@ -1,7 +1,7 @@
 # Template file for 'sonic-quick-image-editor'
 pkgname=sonic-quick-image-editor
-version=0.6.2.1.1
-revision=2
+version=0.7.0.1
+revision=1
 build_style=cmake
 configure_args="-DBUILD_WITH_QT6=ON -DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DECM_MKSPECS_INSTALL_DIR=/usr/lib/qt6/mkspecs/modules
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-quick-image-editor"
 distfiles="https://github.com/Sonic-DE/sonic-quick-image-editor/archive/refs/tags/${version}.tar.gz"
-checksum=6f695834bdeea7cece70038c0b81437e36c614f7978f902a1b7885be67965623
+checksum=ac92df06d7c938783d795de793c68d0e3baf7567977b46afa7dcc0070857dc54
 provides="kquickimageeditor-${version}_${revision}"
 conflicts="kquickimageeditor"
 replaces="kquickimageeditor>=0"

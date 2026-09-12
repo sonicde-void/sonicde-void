@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-autocomplete'
 pkgname=sonic-frameworks-autocomplete
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base sonic-frameworks-settings"
 makedepends="sonic-frameworks-text-codec-devel sonic-frameworks-settings-devel sonic-frameworks-widgets-addons-devel"
@@ -10,7 +10,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-autocomplete"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-autocomplete/archive/refs/tags/${version}.tar.gz"
-checksum=0d748b2e03a8babc8c5c07a8e4a543ec0e926887e195da1efd672b1f237bab48
+checksum=f6774110d6c4054f64ff613e7ae13e9549eb51fd1d04d7eca185856d84a4d52a
 provides="kf6-kcompletion-${version}_${revision}"
 conflicts="kf6-kcompletion"
 replaces="kf6-kcompletion>=0"

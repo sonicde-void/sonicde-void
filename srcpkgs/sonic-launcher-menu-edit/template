@@ -1,7 +1,7 @@
 # Template file for 'sonic-launcher-menu-edit'
 pkgname=sonic-launcher-menu-edit
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-base qt6-tools gettext
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-launcher-menu-edit"
 distfiles="https://github.com/Sonic-DE/sonic-launcher-menu-edit/archive/refs/tags/${version}.tar.gz"
-checksum=b3eee1539efad6ce424766d21fdaf326d77d7e83e383191cffb63d2115833d29
+checksum=e1d271eb4debb323472c6f454cac9a077a3c8ae4871faa0725a0ab315a922c36
 provides="kmenuedit-${version}_${revision}"
 conflicts="kmenuedit"
 replaces="kmenuedit>=0"

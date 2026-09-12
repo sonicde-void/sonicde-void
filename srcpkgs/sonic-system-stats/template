@@ -1,7 +1,7 @@
 # Template file for 'sonic-system-stats'
 pkgname=sonic-system-stats
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-system-stats"
 distfiles="https://github.com/Sonic-DE/sonic-system-stats/archive/refs/tags/${version}.tar.gz"
-checksum=f2968d7d69a2f0c0732fb8b54f2cb5f5ea1400267a7b38224a8f8a081ca4f48d
+checksum=10938690f3b514b720e4b5c58d75decef6352ce5d9f1c6d06f4be5dff1e6b62f
 provides="ksystemstats-${version}_${revision}"
 conflicts="ksystemstats"
 replaces="ksystemstats>=0"

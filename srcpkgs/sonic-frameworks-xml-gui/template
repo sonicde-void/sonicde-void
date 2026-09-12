@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-xml-gui'
 pkgname=sonic-frameworks-xml-gui
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 _llvmver=21
 build_style=cmake
 configure_args="$(vopt_bool python BUILD_PYTHON_BINDINGS)"
@@ -17,7 +17,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-xml-gui"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-xml-gui/archive/refs/tags/${version}.tar.gz"
-checksum=fff6eac9aae50d97389a9142218295e0740379630ef158fd5fee566edc9a924e
+checksum=b2be2c09add5c148d7e417d9ff8650a56f43528a1040afc64f1921107a1b44f6
 provides="kf6-kxmlgui-${version}_${revision}"
 conflicts="kf6-kxmlgui"
 replaces="kf6-kxmlgui>=0"

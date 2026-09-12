@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-text-editor'
 pkgname=sonic-frameworks-text-editor
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -19,7 +19,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-text-editor"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-text-editor/archive/refs/tags/${version}.tar.gz"
-checksum=0883ffc5584027970f60e11a715d10af5a2de7e5dea623ee8cadfc0dc9dc5727
+checksum=4173a71692966c3bc2bd17fadf44f382fa591b937d5bc3741346c55f527999ef
 provides="kf6-ktexteditor-${version}_${revision}"
 conflicts="kf6-ktexteditor"
 replaces="kf6-ktexteditor>=0"
