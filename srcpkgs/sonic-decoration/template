@@ -1,7 +1,7 @@
 # Template file for 'sonic-decoration'
 pkgname=sonic-decoration
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
 hostmakedepends="sonic-frameworks-cmake-modules gettext qt6-base qt6-tools"
@@ -11,7 +11,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-decoration"
 distfiles="https://github.com/Sonic-DE/sonic-decoration/archive/refs/tags/${version}.tar.gz"
-checksum=7f57a78245a957d2818321e96ac0cd5e318505a86927914395d2bae6e6f74fb9
+checksum=3b2bfb2c3af5453c616d4b1bbab8739fdc1e2b90bcfec9a6e942905c49cb143a
 provides="kf6-kdecoration-${version}_${revision}"
 conflicts="kf6-kdecoration"
 replaces="kf6-kdecoration>=0"

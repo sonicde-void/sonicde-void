@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-file-search'
 pkgname=sonic-frameworks-file-search
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -17,7 +17,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-file-search"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-file-search/archive/refs/tags/${version}.tar.gz"
-checksum=9988611f2905947436b55a9b8c5a465cb024e3e0cf5e43239b61008f6732b22e
+checksum=c9df9dabaa13d34864fceab0a465e29b8cc9d261fdc659a5557c20dca2f80ecb
 provides="kf6-baloo-${version}_${revision}"
 conflicts="kf6-baloo"
 replaces="kf6-baloo>=0"

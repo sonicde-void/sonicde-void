@@ -1,7 +1,7 @@
 # Template file for 'sonic-accounts-integration'
 pkgname=sonic-accounts-integration
-version=26.04.3
-revision=2
+version=26.08.0
+revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -17,7 +17,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-accounts-integration"
 distfiles="https://github.com/Sonic-DE/sonic-accounts-integration/archive/refs/tags/${version}.tar.gz"
-checksum=a8e5391fffd40706764d73a1ec14feb54ee85185dd61515783ed051b11f715ff
+checksum=df84c9ce5c4527f4cc42f22525175356ca48ae97604ecead5927c0e28c464778
 provides="kf6-kaccounts-integration-${version}_${revision}"
 conflicts="kf6-kaccounts-integration"
 replaces="kf6-kaccounts-integration>=0"

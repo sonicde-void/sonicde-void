@@ -1,7 +1,7 @@
 # Template file for 'sonic-system-info'
 pkgname=sonic-system-info
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -22,7 +22,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-system-info"
 distfiles="https://github.com/Sonic-DE/sonic-system-info/archive/refs/tags/${version}.tar.gz"
-checksum=a77f207ac3ad2fffc5409917066181c6798c436789eddff69d667170e5f3546b
+checksum=1099c7c3df53c18290671a650a41ad9fa748df86a919171753ec26f66421dbc4
 provides="kinfocenter-${version}_${revision}"
 conflicts="kinfocenter"
 replaces="kinfocenter>=0"

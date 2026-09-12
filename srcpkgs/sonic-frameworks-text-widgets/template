@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-text-widgets'
 pkgname=sonic-frameworks-text-widgets
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base
  gettext sonic-frameworks-settings"
@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-text-widgets"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-text-widgets/archive/refs/tags/${version}.tar.gz"
-checksum=1eabfb1ff3664f9014902b7977106fe99b5a0b93da97d5e35a89054fd578acf9
+checksum=e5949c8cf0fd027a74db2d600b9d4005f071a302eabc7b5fba65369538bd2d9e
 provides="kf6-ktextwidgets-${version}_${revision}"
 conflicts="kf6-ktextwidgets"
 replaces="kf6-ktextwidgets>=0"

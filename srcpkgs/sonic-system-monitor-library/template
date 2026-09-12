@@ -1,7 +1,7 @@
 # Template file for 'sonic-system-monitor-library'
 pkgname=sonic-system-monitor-library
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -19,7 +19,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-system-monitor-library"
 distfiles="https://github.com/Sonic-DE/sonic-system-monitor-library/archive/refs/tags/${version}.tar.gz"
-checksum=537d447788842626ba14a351e280fb18ebc8c8c8886f9be7cea4fab54a55c106
+checksum=50ec56ffbaab18a62a514fa79ee0037a086df7d88e75cfb5f7c7f6509a4e82ea
 provides="libksysguard-${version}_${revision}"
 conflicts="libksysguard"
 replaces="libksysguard>=0"

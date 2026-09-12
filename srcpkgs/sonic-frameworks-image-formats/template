@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-image-formats'
 pkgname=sonic-frameworks-image-formats
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DKIMAGEFORMATS_HEIF=ON -DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-image-formats"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-image-formats/archive/refs/tags/${version}.tar.gz"
-checksum=2dab9ff55035e1e04e432e7a9effbcd7bd1ebfe0f8ef9dcc2ad341db6831fcef
+checksum=ede0cfbaa3fea54f6fc0941dd12a78a43f14f408b60dcbb581406a81b98ed288
 provides="kf6-kimageformats-${version}_${revision}"
 conflicts="kf6-kimageformats"
 replaces="kf6-kimageformats>=0"

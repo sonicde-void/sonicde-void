@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-syntax-highlighting'
 pkgname=sonic-frameworks-syntax-highlighting
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="
  -DKATEHIGHLIGHTINGINDEXER_EXECUTABLE=/usr/libexec/kate/katehighlightingindexer
@@ -15,7 +15,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-syntax-highlighting"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-syntax-highlighting/archive/refs/tags/${version}.tar.gz"
-checksum=157aa5ed72616fa6d7a6aa91d7efa90e55cfe2299ea318649ec8329380b6fdaf
+checksum=d6c8d341044767e7a450f1a748128f07df91dbaa02a428be852c4edb1d328752
 provides="kf6-syntax-highlighting-${version}_${revision}"
 conflicts="kf6-syntax-highlighting"
 replaces="kf6-syntax-highlighting>=0"

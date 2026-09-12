@@ -1,7 +1,7 @@
 # Template file for 'sonic-polkit-agent'
 pkgname=sonic-polkit-agent
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_LIBEXECDIR=libexec"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-base qt6-tools gettext"
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-polkit-agent"
 distfiles="https://github.com/Sonic-DE/sonic-polkit-agent/archive/refs/tags/${version}.tar.gz"
-checksum=b92dbf9b2a9f51e8ab776635639b31718b98c1d620eea524bf1dcfb8ee28adf6
+checksum=afcaddd71da61abc001afbd4f5227e631c2329045e8c78001075e624a8b91d98
 provides="polkit-kde-agent-${version}_${revision}"
 conflicts="polkit-kde-agent"
 replaces="polkit-kde-agent>=0"

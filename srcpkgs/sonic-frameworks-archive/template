@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-archive'
 pkgname=sonic-frameworks-archive
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base pkg-config"
 makedepends="qt6-base-devel zlib-devel bzip2-devel liblzma-devel libzstd-devel"
@@ -10,7 +10,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-archive"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-archive/archive/refs/tags/${version}.tar.gz"
-checksum=1500df82a23d1aa38de3e2dc734d08ce4b9d6904ee97f570c84aab57f69e59d8
+checksum=b8cf938b3beb8dac649f4d0467596736602bcd76af411e2bb9b99d8212d82fe0
 provides="kf6-karchive-${version}_${revision}"
 conflicts="kf6-karchive"
 replaces="kf6-karchive>=0"

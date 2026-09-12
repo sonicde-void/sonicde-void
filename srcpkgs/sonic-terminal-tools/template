@@ -1,7 +1,7 @@
 # Template file for 'sonic-terminal-tools'
 pkgname=sonic-terminal-tools
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -19,7 +19,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-terminal-tools"
 distfiles="https://github.com/Sonic-DE/sonic-terminal-tools/archive/refs/tags/${version}.tar.gz"
-checksum=65a68df3909d247912df53d197bb6a4574cb85aec967378260276efc32a9ee1f
+checksum=05115bf0a4791ee110daa2a7ae458aaa30b8a2047a7e49ae41dc7de0793a95d9
 provides="kde-cli-tools-${version}_${revision}"
 conflicts="kde-cli-tools"
 replaces="kde-cli-tools>=0"
