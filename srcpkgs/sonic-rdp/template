@@ -5,9 +5,10 @@ revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
- -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
+ -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+ -DBUILD_PLASMA_SESSION=OFF"
 hostmakedepends="sonic-frameworks-cmake-modules pkg-config qt6-base gettext qt6-tools freerdp
- sonic-frameworks-settings sonic-frameworks-settings-utils plasma-wayland-protocols"
+ sonic-frameworks-settings sonic-frameworks-settings-utils"
 makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-settings-devel sonic-frameworks-core-addons-devel
  sonic-frameworks-internationalization-devel sonic-pipewire-devel sonic-frameworks-status-notification-devel
  sonic-frameworks-dbus-devel sonic-frameworks-crash-handler-devel sonic-frameworks-gui-addons-devel pam-devel
