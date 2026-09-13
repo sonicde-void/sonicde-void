@@ -6,7 +6,7 @@ build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="pkg-config sonic-frameworks-cmake-modules qt6-base qt6-tools gettext
- sonic-frameworks-doctools sonic-frameworks-settings"
+ sonic-frameworks-doctools sonic-frameworks-settings dbus AppStream xorg-server-xvfb"
 makedepends="sonic-frameworks-addons-downloader-devel sonic-frameworks-notification-settings-devel sonic-frameworks-crash-handler-devel
  sonic-frameworks-dbus-devel sonic-frameworks-bookmarks-devel sonic-frameworks-settings-devel
  sonic-frameworks-settings-ui-devel sonic-frameworks-core-addons-devel sonic-frameworks-gui-addons-devel
