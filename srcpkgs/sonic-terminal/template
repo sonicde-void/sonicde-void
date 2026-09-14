@@ -1,12 +1,12 @@
 # Template file for 'sonic-terminal'
 pkgname=sonic-terminal
-version=26.04.3.2
+version=26.08.0
 revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="pkg-config sonic-frameworks-cmake-modules qt6-base qt6-tools gettext
- sonic-frameworks-doctools sonic-frameworks-settings"
+ sonic-frameworks-doctools sonic-frameworks-settings dbus AppStream xorg-server-xvfb"
 makedepends="sonic-frameworks-addons-downloader-devel sonic-frameworks-notification-settings-devel sonic-frameworks-crash-handler-devel
  sonic-frameworks-dbus-devel sonic-frameworks-bookmarks-devel sonic-frameworks-settings-devel
  sonic-frameworks-settings-ui-devel sonic-frameworks-core-addons-devel sonic-frameworks-gui-addons-devel
@@ -20,7 +20,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-terminal"
 distfiles="https://github.com/Sonic-DE/sonic-terminal/archive/refs/tags/${version}.tar.gz"
-checksum=f39685fbc4e47bdc7ce28299b925ff3a92d17ef0e2fe940c05a52f9e3bb44403
+checksum=385b85f60609a18ea9e041c05ddc1f61730cf91bf8661d5a1f16a67dc91c6df9
 provides="konsole-${version}_${revision}"
 conflicts="konsole"
 replaces="konsole>=0"

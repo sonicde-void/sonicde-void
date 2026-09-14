@@ -1,7 +1,7 @@
 # Template file for 'sonic-partition-manager'
 pkgname=sonic-partition-manager
-version=26.04.3
-revision=2
+version=26.08.0
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -16,7 +16,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-partition-manager"
 distfiles="https://github.com/Sonic-DE/sonic-partition-manager/archive/refs/tags/${version}.tar.gz"
-checksum=1fea1269ca6dfed1206acad67f8c47dfc1e87cbf78d3849f81166e3bad6ddb03
+checksum=13172ce09fdc1d97dfac566d35edc04792b1af81fec69798a4961434642860ee
 provides="partitionmanager-${version}_${revision}"
 conflicts="partitionmanager"
 replaces="partitionmanager>=0"

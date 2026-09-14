@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-purpose'
 pkgname=sonic-frameworks-purpose
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-purpose"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-purpose/archive/refs/tags/${version}.tar.gz"
-checksum=b1b27b4746d7512bc72167b4f3f553857d068a29b7a986e24a3d281e3f9de41d
+checksum=505942650640e517c0b73064a9fcccaad1d76b273b712525e9b8b623cb5868f5
 provides="kf6-purpose-${version}_${revision}"
 conflicts="kf6-purpose"
 replaces="kf6-purpose>=0"

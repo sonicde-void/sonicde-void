@@ -1,0 +1,28 @@
+--- a/src/kioworkers/file/file_unix.cpp
++++ b/src/kioworkers/file/file_unix.cpp
+@@ -604,14 +604,6 @@
+     return WorkerResult::fail(KIO::ERR_CANNOT_SYMLINK, dest);
+ }
+ 
+-// Qt maps QT_STATBUF to struct stat64 under large file support, and there is no QT_FSTATAT, so the
+-// same choice is made here for the directory-relative fstatat().
+-#if defined(QT_USE_XOPEN_LFS_EXTENSIONS) && defined(QT_LARGEFILE_SUPPORT)
+-#define FSTATAT ::fstatat64
+-#else
+-#define FSTATAT ::fstatat
+-#endif
+-
+ WorkerResult FileProtocol::deleteUnder(int dfd, KIO::filesize_t &removed)
+ {
+     // fdopendir takes the descriptor over, so closedir is what closes it.
+@@ -638,8 +630,8 @@
+         unsigned char type = entry->d_type;
+         KIO::filesize_t size = 0;
+         if (type != DT_DIR) {
+-            QT_STATBUF buf;
+-            if (FSTATAT(dirfd(dir), entry->d_name, &buf, AT_SYMLINK_NOFOLLOW) == 0) {
++            struct stat buf;
++            if (::fstatat(dirfd(dir), entry->d_name, &buf, AT_SYMLINK_NOFOLLOW) == 0) {
+                 if (type == DT_UNKNOWN) {
+                     type = S_ISDIR(buf.st_mode) ? DT_DIR : (S_ISLNK(buf.st_mode) ? DT_LNK : DT_REG);
+                 }

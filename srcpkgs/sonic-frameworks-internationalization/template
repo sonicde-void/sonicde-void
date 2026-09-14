@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-internationalization'
 pkgname=sonic-frameworks-internationalization
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-internationalization"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-internationalization/archive/refs/tags/${version}.tar.gz"
-checksum=2f8d2bab16e53bad9aba92c726298128b8494f2965f2763b32daaf628d5a38c4
+checksum=d2700db5b8749b9f5f411ce2d4025d4bbec72eb593e735eb20d9b40d48b4f467
 provides="kf6-ki18n-${version}_${revision}"
 conflicts="kf6-ki18n"
 replaces="kf6-ki18n>=0"

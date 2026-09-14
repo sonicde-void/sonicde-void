@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-data-views'
 pkgname=sonic-frameworks-data-views
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DBUILD_DESIGNERPLUGIN=ON -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base"
@@ -11,7 +11,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-data-views"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-data-views/archive/refs/tags/${version}.tar.gz"
-checksum=8ed5660119b6ea461ddb3d46ac9cc90fdd764b27c472483c9d2417f6052978e2
+checksum=c6fc3a6168c2e3dc95f6a43df1564ab593f0f4a3cec48f00271891a172181c46
 provides="kf6-kitemviews-${version}_${revision}"
 conflicts="kf6-kitemviews"
 replaces="kf6-kitemviews>=0"

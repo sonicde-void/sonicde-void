@@ -1,7 +1,7 @@
 # Template file for 'sonic-frameworks-networkmanager'
 pkgname=sonic-frameworks-networkmanager
-version=6.29.0
-revision=2
+version=6.30.0
+revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml"
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base
@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-networkmanager"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-networkmanager/archive/refs/tags/${version}.tar.gz"
-checksum=ea1a4c531000595dbcd1ee5879771b97c690b30331216ee5c489672435dd42d1
+checksum=ac8860f043c4efbff55de15f08a7be7c331de4d4e416652a93840a77f6f5f3f4
 provides="kf6-networkmanager-qt-${version}_${revision}"
 conflicts="kf6-networkmanager-qt"
 replaces="kf6-networkmanager-qt>=0"

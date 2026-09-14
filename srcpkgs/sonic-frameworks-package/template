@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-package'
 pkgname=sonic-frameworks-package
-version=6.29.0.1
+version=6.30.0
 revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base sonic-frameworks-doctools
@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-package"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-package/archive/refs/tags/${version}.tar.gz"
-checksum=dfcd9c8ec2abee4a2662d1c8000a3a2b479385f297aff86441dff25a2cd0c6a3
+checksum=1f0de9b1d2b754115ce3cd96faa84960f55008f4687c374c70c1606b6dbd979a
 provides="kf6-kpackage-${version}_${revision}"
 conflicts="kf6-kpackage"
 replaces="kf6-kpackage>=0"

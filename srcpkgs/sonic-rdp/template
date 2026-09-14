@@ -1,13 +1,14 @@
 # Template file for 'sonic-rdp'
 pkgname=sonic-rdp
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
- -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
+ -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+ -DBUILD_PLASMA_SESSION=OFF"
 hostmakedepends="sonic-frameworks-cmake-modules pkg-config qt6-base gettext qt6-tools freerdp
- sonic-frameworks-settings sonic-frameworks-settings-utils plasma-wayland-protocols"
+ sonic-frameworks-settings sonic-frameworks-settings-utils"
 makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-settings-devel sonic-frameworks-core-addons-devel
  sonic-frameworks-internationalization-devel sonic-pipewire-devel sonic-frameworks-status-notification-devel
  sonic-frameworks-dbus-devel sonic-frameworks-crash-handler-devel sonic-frameworks-gui-addons-devel pam-devel
@@ -16,9 +17,9 @@ makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-settings-dev
 short_desc="Library and examples for creating an RDP server"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
-homepage="https://github.com/Sonic-DE/sonic-rdp"
-distfiles="https://github.com/Sonic-DE/sonic-rdp/archive/refs/tags/${version}.tar.gz"
-checksum=b24a044edeec01e3bb0f26b58a8afc3c88ba8f13e9badf8b34e7fc4bee781d67
+homepage="https://github.com/Sonic-DE/sonic-rdp-server"
+distfiles="https://github.com/Sonic-DE/sonic-rdp-server/archive/refs/tags/${version}.tar.gz"
+checksum=81da23eedb37f601230a59fdace07248107e24fca465cf979e95a196d267b4d7
 provides="krdp-${version}_${revision}"
 conflicts="krdp"
 replaces="krdp>=0"

@@ -1,12 +1,12 @@
 # Template file for 'sonic-login-manager'
 pkgname=sonic-login-manager
-version=6.7.4.5
+version=6.7.5
 revision=1
 build_style=cmake
 configure_args=" -DKDE_INSTALL_LIBEXECDIR=libexec -DSPLIT_BUILD=ON
- -DCMAKE_INSTALL_SYSCONFDIR=/etc -DINSTALL_PAM_CONFIGURATION=OFF
+ -DINSTALL_PAM_CONFIGURATION=OFF -DX_SERVER_EXECUTABLE=/usr/libexec/Xorg
  -DDBUS_CONFIG_FILENAME=plasma_org.freedesktop.DisplayManager.conf
- -DX_SERVER_EXECUTABLE=/usr/libexec/Xorg"
+ -DCMAKE_INSTALL_FULL_SYSCONFDIR=/etc -DCMAKE_INSTALL_SYSCONFDIR=/etc"
 hostmakedepends="pkg-config gettext qt6-tools qt6-base qt6-shadertools sonic-frameworks-cmake-modules xorg-server"
 makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-settings-devel sonic-frameworks-dbus-devel
  sonic-frameworks-internationalization-devel sonic-frameworks-package-devel sonic-frameworks-app-info-devel
@@ -20,7 +20,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-login-manager"
 distfiles="https://github.com/Sonic-DE/sonic-login-manager/archive/refs/tags/${version}.tar.gz"
-checksum=c38d7b67889b5f733dbf59fa6746bcfef6a40105f5059c3ce8bf4114400ef953
+checksum=e289484c7ba29da4f7f2305930734172bde3fe33da59bbd9ac7d72fa23eaba2a
 provides="plasma-login-manager-${version}_${revision}"
 system_groups="soniclogin"
 system_accounts="soniclogin"
@@ -29,10 +29,15 @@ make_dirs="/var/log/sonic 0755 root root
  /run/soniclogin 0711 soniclogin soniclogin"
 
 post_install() {
-    rm -rf ${DESTDIR}/etc/dinit.d
-    rm -rf ${DESTDIR}/etc/init.d
-    rm -rf ${DESTDIR}/etc/runit
-    rm -rf ${DESTDIR}/etc/s6
-    rm -rf ${DESTDIR}/etc/logrotate.d
+	if [ -d "${DESTDIR}/usr/etc" ]; then
+		vmkdir etc
+		cp -a "${DESTDIR}/usr/etc/." "${DESTDIR}/etc/"
+		rm -rf "${DESTDIR}/usr/etc"
+	fi	
+	rm -rf ${DESTDIR}/etc/dinit.d
+	rm -rf ${DESTDIR}/etc/init.d
+	rm -rf ${DESTDIR}/etc/runit
+	rm -rf ${DESTDIR}/etc/s6
+	rm -rf ${DESTDIR}/etc/logrotate.d
 	vsv soniclogin
 }

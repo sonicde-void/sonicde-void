@@ -1,7 +1,7 @@
 # Template file for 'sonic-browser-integration'
 pkgname=sonic-browser-integration
-version=6.7.4
-revision=2
+version=6.7.5
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -20,7 +20,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-browser-integration"
 distfiles="https://github.com/Sonic-DE/sonic-browser-integration/archive/refs/tags/${version}.tar.gz"
-checksum=12b205ee634f96ebbbe44cccce04fcdfe325ae28c34546db2de0d2e77b512ce7
+checksum=62f53fecda3af5a709974a348aed8e57ec732b7a5bdc006c81989fed23b006e5
 provides="plasma-browser-integration-${version}_${revision}"
 conflicts="plasma-browser-integration"
 replaces="plasma-browser-integration>=0"
