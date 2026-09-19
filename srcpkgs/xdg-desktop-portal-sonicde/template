@@ -1,6 +1,6 @@
 # Template file for 'xdg-desktop-portal-sonicde'
 pkgname=xdg-desktop-portal-sonicde
-version=6.7.5
+version=6.7.5.1
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_LIBEXECDIR=libexec"
@@ -20,7 +20,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/xdg-desktop-portal-sonicde"
 distfiles="https://github.com/Sonic-DE/xdg-desktop-portal-sonicde/archive/refs/tags/${version}.tar.gz"
-checksum=e9254328f70e8774832c79f3a559d487da2bf23300c7a6e1aa161dbaf6d194d2
+checksum=81cfb0efa9d8d8af7a75baef553b29c4b3cc85e6112f826a323c28aac5ea19ef
 provides="xdg-desktop-portal-kde-${version}_${revision}"
 conflicts="xdg-desktop-portal-kde"
 replaces="xdg-desktop-portal-kde>=0"
