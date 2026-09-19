@@ -1,7 +1,7 @@
 # Template file for 'sonic-silver-sddm'
 pkgname=sonic-silver-sddm
-version=1.0.0
-revision=2
+version=1.1.0
+revision=1
 build_style=gnu-makefile
 depends="sonic-workspace"
 short_desc="Sonic Silver SDDM Theme (KDE Plasma 6)"
@@ -9,7 +9,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/silver-sddm"
 distfiles="https://github.com/Sonic-DE/silver-sddm/archive/refs/tags/${version}.tar.gz"
-checksum=3c32317306a723a0cdbffb41ebb0e817e46527c8f2ebdfd1cd1f304ee6d3a235
+checksum=7af2afea4e7724bafe7e7cb37ad07bc0f523bad1cef774680ef9163adb97a0d0
 
 do_build() {
 	:
