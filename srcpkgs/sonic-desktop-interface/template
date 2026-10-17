@@ -1,6 +1,6 @@
 # Template file for 'sonic-desktop-interface'
 pkgname=sonic-desktop-interface
-version=6.7.5.3
+version=6.7.5.4
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -33,7 +33,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-desktop-interface"
 distfiles="https://github.com/Sonic-DE/${pkgname}/archive/refs/tags/${version}.tar.gz"
-checksum=6f0671bffbe38f7dab39ed3eb53aadfb7b86fa07780f3d9c127bbadf3d48d104
+checksum=726962c0bab4216a56d18fbc5364a9ca46aa6d28cb1ac6b0c17a58518cbe6c13
 provides="plasma-desktop-${version}_${revision}"
 conflicts="plasma-desktop"
 replaces="plasma-desktop>=0"
