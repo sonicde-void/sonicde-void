@@ -1,6 +1,6 @@
 # Template file for 'sonic-screen'
 pkgname=sonic-screen
-version=6.7.5.1
+version=6.8.0
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -20,7 +20,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-screen"
 distfiles="https://github.com/Sonic-DE/sonic-screen/archive/refs/tags/${version}.tar.gz"
-checksum=2faa2c7be7773060b66322427c7d083b9bf36c3352ef1d363acd9ee85025afb0
+checksum=18b84570b7a1d40e43a0f2f91887814e14328a0f1a200b8d799aca56d10baefe
 provides="kscreen-${version}_${revision}"
 conflicts="kscreen"
 replaces="kscreen>=0"

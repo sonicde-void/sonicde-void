@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-core-addons'
 pkgname=sonic-frameworks-core-addons
-version=6.30.0
+version=6.31.0
 revision=1
 build_style=cmake
 _llvmver=21
@@ -16,7 +16,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-only OR LGPL-3.0-only"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-core-addons"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-core-addons/archive/refs/tags/${version}.tar.gz"
-checksum=41514b9cea9a97ab92db6a11444dfb7bd70cd52c1c834a64ac59d88edf385914
+checksum=fd8297c46f64c55e856c1a31d3380ad7167a9e01c03af5eeecb1d27b1ac8fd2d
 provides="kf6-kcoreaddons-${version}_${revision}"
 conflicts="kf6-kcoreaddons"
 replaces="kf6-kcoreaddons>=0"

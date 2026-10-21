@@ -1,6 +1,6 @@
 # Template file for 'sonic-tv-interface'
 pkgname=sonic-tv-interface
-version=6.7.5
+version=6.8.0
 revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-base pkg-config qt6-declarative-host-tools
@@ -19,7 +19,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later AND CC-BY-SA-4.0"
 homepage="https://github.com/Sonic-DE/sonic-tv-interface"
 distfiles="https://github.com/Sonic-DE/sonic-tv-interface/archive/refs/tags/${version}.tar.gz"
-checksum=1153cdba6e6be98a71f0e35a1ee9395ca84d2eb2f09e68daaf74590b8e2c216f
+checksum=143091666dba8d26ec286b43b8cc7fb469a744e9bab6bc81f785b1d9feb6b69d
 
 if [ "$XBPS_WORDSIZE$XBPS_WORDSIZE" != "64$XBPS_TARGET_WORDSIZE" ]; then
 	broken="no qt6-webengine"

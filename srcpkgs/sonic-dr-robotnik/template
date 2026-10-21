@@ -1,6 +1,6 @@
 # Template file for 'sonic-dr-robotnik'
 pkgname=sonic-dr-robotnik
-version=6.7.5
+version=6.8.0
 revision=1
 build_style=cmake
 configure_args="-DCMAKE_DISABLE_FIND_PACKAGE_Systemd=ON -DBUILD_TESTING=OFF
@@ -20,4 +20,4 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-dr-robotnik"
 distfiles="https://github.com/Sonic-DE/sonic-dr-robotnik/archive/refs/tags/${version}.tar.gz"
-checksum=6c727e6c07704fd028c815cf2daa314693bfb52218cd3cf8792aef1f21976961
+checksum=c153c7bb74abf069fa151e652ae6a5f64773a20043e65e16861efaf02861984f

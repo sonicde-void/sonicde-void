@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-bluetooth'
 pkgname=sonic-frameworks-bluetooth
-version=6.30.0
+version=6.31.0
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml"
@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-bluetooth"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-bluetooth/archive/refs/tags/${version}.tar.gz"
-checksum=40416c2addcf30a5020e15134655f872315b46efac30c61f0596653dd97970ea
+checksum=68575737ef8f2c5aa626bcdf97628590dfcb22034319b12b9a27593a04b19c11
 provides="kf6-bluez-qt-${version}_${revision}"
 conflicts="kf6-bluez-qt"
 replaces="kf6-bluez-qt>=0"

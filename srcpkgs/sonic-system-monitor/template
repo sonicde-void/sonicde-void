@@ -1,6 +1,6 @@
 # Template file for 'sonic-system-monitor'
 pkgname=sonic-system-monitor
-version=6.7.5
+version=6.8.0
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-system-monitor"
 distfiles="https://github.com/Sonic-DE/sonic-system-monitor/archive/refs/tags/${version}.tar.gz"
-checksum=ade7a2fd6363f51d33b681f73062ab68de265d95c45830ac604f0b96f30a4b8c
+checksum=c5871c654cedf848dd2f625d5b885805fc67c59ec21d7d8736a255ef1a18e921
 provides="plasma-systemmonitor-${version}_${revision}"
 conflicts="plasma-systemmonitor"
 replaces="plasma-systemmonitor>=0"

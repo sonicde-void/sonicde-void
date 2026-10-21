@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-color-scheme'
 pkgname=sonic-frameworks-color-scheme
-version=6.30.0
+version=6.31.0
 revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base
@@ -12,7 +12,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-color-scheme"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-color-scheme/archive/refs/tags/${version}.tar.gz"
-checksum=50ed2d41f62912cd6de1bdfd2aa400f743e178819d87966b10796b5c22346dfc
+checksum=48d183f95f376d59404fa14811260c1a797b83fecf4050b10f9cf88d0b77f16e
 # transitive deps from sonic-frameworks-gui-addons, for build ordering
 makedepends+=" libpyside6-devel"
 provides="kf6-kcolorscheme-${version}_${revision}"

@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-qt-integration'
 pkgname=sonic-frameworks-qt-integration
-version=6.30.0
+version=6.31.0
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -17,7 +17,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-qt-integration"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-qt-integration/archive/refs/tags/${version}.tar.gz"
-checksum=363eb21e52d8f9974bb8769ee4581266fd28ebbe76b2a489900ea85aa5c095d0
+checksum=5f6feb53310013f5a0daa7cef74732d4ae0ce57aae439a0ebe709d49de6134ae
 provides="kf6-frameworkintegration-${version}_${revision}"
 conflicts="kf6-frameworkintegration"
 replaces="kf6-frameworkintegration>=0"

@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-spell-check'
 pkgname=sonic-frameworks-spell-check
-version=6.30.0
+version=6.31.0
 revision=1
 build_style=cmake
 configure_args="-DBUILD_DESIGNERPLUGIN=ON
@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-spell-check"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-spell-check/archive/refs/tags/${version}.tar.gz"
-checksum=0cfd382e875abbf2935a5f64a5c146381492540950897d56fcf54721535cfa10
+checksum=147b9384d7d381741b7323d40233d8341c34aa91c52f5f5d0c92abf45fca8f1a
 provides="kf6-sonnet-${version}_${revision}"
 conflicts="kf6-sonnet"
 replaces="kf6-sonnet>=0"

@@ -1,6 +1,6 @@
 # Template file for 'sonic-ssh-password-prompt'
 pkgname=sonic-ssh-password-prompt
-version=6.7.5
+version=6.8.0
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake -DBUILD_QT5=OFF"
@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-ssh-password-prompt"
 distfiles="https://github.com/Sonic-DE/sonic-ssh-password-prompt/archive/refs/tags/${version}.tar.gz"
-checksum=e1baf0e9fd32c2b20bbfd43ff9bdb5b56040a04dc66f6e0fa4671af788e5a419
+checksum=5b0ab24ae6a44f4d2622c1f77a873f0ecb0e2b9bb83d8a69df78ad227807c8c4
 alternatives="ssh-askpass:/usr/libexec/ssh-askpass:/usr/bin/ksshaskpass"
 provides="ksshaskpass-${version}_${revision}"
 conflicts="ksshaskpass"

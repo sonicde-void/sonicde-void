@@ -1,6 +1,6 @@
 # Template file for 'sonic-night-light'
 pkgname=sonic-night-light
-version=6.7.5
+version=6.8.0
 revision=1
 build_style=cmake
 configure_args="
@@ -15,7 +15,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-night-light"
 distfiles="https://github.com/Sonic-DE/sonic-night-light/archive/refs/tags/${version}.tar.gz"
-checksum=f64c3713183412f32337c1d7510192d6ad220962d0c75a6ad6fa21a17cb41880
+checksum=35efafd4780130043f645428d8ab42100300a212901fccd6e3d4996b11b44e86
 provides="knighttime-${version}_${revision}"
 conflicts="knighttime"
 replaces="knighttime>=0"

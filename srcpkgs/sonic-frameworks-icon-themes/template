@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-icon-themes'
 pkgname=sonic-frameworks-icon-themes
-version=6.30.0
+version=6.31.0
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -16,7 +16,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-icon-themes"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-icon-themes/archive/refs/tags/${version}.tar.gz"
-checksum=bcffe3f58cd78b5b1dae0e85f8475479d227afbabea6f3c918739a0dee2bbc65
+checksum=373382f881b3321c38d8fc4c1444f3cac8ef7f7eb8922ffdb8069583ef79111a
 provides="kf6-kiconthemes-${version}_${revision}"
 conflicts="kf6-kiconthemes"
 replaces="kf6-kiconthemes>=0"

@@ -1,6 +1,6 @@
 # Template file for 'sonic-write-daemon'
 pkgname=sonic-write-daemon
-version=6.7.5
+version=6.8.0
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -11,7 +11,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-write-daemon"
 distfiles="https://github.com/Sonic-DE/sonic-write-daemon/archive/refs/tags/${version}.tar.gz"
-checksum=1af05d1b647dda81b9f4ee256e4f247b501c6f7f44ee992a26cf7ade6f1bd51c
+checksum=bd29ccd2ae12ba0f460c22447c1ca494992887848aabc21663124c32047e19ad
 provides="kwrited-${version}_${revision}"
 conflicts="kwrited"
 replaces="kwrited>=0"

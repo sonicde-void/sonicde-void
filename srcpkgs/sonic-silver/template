@@ -1,6 +1,6 @@
 # Template file for 'sonic-silver'
 pkgname=sonic-silver
-version=6.7.5
+version=6.8.0
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF"
@@ -16,4 +16,4 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-silver"
 distfiles="https://github.com/Sonic-DE/sonic-silver/archive/refs/tags/${version}.tar.gz"
-checksum=3681dc23cbbd03644cbef717fa63df36661cae2b9438dadeafd4771fdff58922
+checksum=3d8abed948ac4b7be07929e9131d7930826bc2a7a29c47c49bfcb53a4d8203fc
