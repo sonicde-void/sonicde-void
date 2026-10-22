@@ -13,7 +13,7 @@ makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-settings-dev
  qt6-base-private-devel qt6-declarative-devel qt6-qt5compat-devel qt6-shadertools-devel pam-devel libXau-devel
  xorg-server-devel sonic-frameworks-auth-devel sonic-frameworks-core-addons-devel sonic-frameworks-io-devel
  sonic-frameworks-quick-ui-devel sonic-frameworks-windowsystem-devel sonic-interface-libraries-devel
- layer-shell-qt-devel sonic-workspace-devel sonic-screen-library-devel libcap-devel"
+ sonic-frameworks-icon-themes-devel sonic-workspace-devel sonic-screen-library-devel layer-shell-qt-devel libcap-devel"
 depends="libelogind"
 short_desc="Sonic Login Manager"
 maintainer="nerdyslacker <karyan40024@gmail.com>"

@@ -11,7 +11,7 @@ makedepends="qt6-multimedia-devel qt6-declarative-private-devel qt6-webengine-de
  sonic-frameworks-internationalization-devel sonic-frameworks-icon-themes-devel sonic-frameworks-io-devel
  sonic-frameworks-quick-ui-devel sonic-frameworks-notifications-devel sonic-frameworks-windowsystem-devel
  sonic-frameworks-svg-devel sonic-interface-libraries-devel sonic-activities-devel sonic-activities-stats-devel
- sonic-workspace-devel libkf6screen-devel SDL3-devel libcec-devel libgomp-devel"
+ sonic-workspace-devel sonic-screen-library-devel SDL3-devel libcec-devel libgomp-devel"
 depends="sonic-win sonic-network-manager sonic-audio-applet-pulse sonic-terminal-tools sonic-screen milou
  kdeconnect plasma-nano plasma-keyboard"
 short_desc="Interface for large screens such as TVs"

@@ -22,6 +22,12 @@ Create config file and add repository:
 printf "repository=https://github.com/sonicde-void/sonicde-void/releases/latest/download/\n" | sudo tee /etc/xbps.d/99-repository-sonicde.conf
 ```
 
+If you want to have unstable repository to test newer version:
+
+```shell
+printf "repository=https://github.com/sonicde-void/sonicde-void/releases/download/testing/\n" | sudo tee /etc/xbps.d/99-repository-sonicde-unstable.conf
+```
+
 Synchronize the repository and accept the fingerprint (Y):
 
 ```shell
