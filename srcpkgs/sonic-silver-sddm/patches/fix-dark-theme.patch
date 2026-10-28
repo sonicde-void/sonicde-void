@@ -1,0 +1,11 @@
+--- a/Sonic-Silver/Login.qml
++++ b/Sonic-Silver/Login.qml
+@@ -346,8 +346,4 @@
+         anchors.bottom: parent.bottom
+         //anchors.bottomMargin: height / 2
+     }
+-
+-    Component.onCompleted: {
+-        focusFirstVisibleFormControl();
+-    }
+ }
