@@ -1,21 +1,21 @@
 # Template file for 'sonic-screenlocker'
 pkgname=sonic-screenlocker
 version=6.8.0.2
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
  -DKDE_INSTALL_LIBEXECDIR=libexec"
 hostmakedepends="sonic-frameworks-cmake-modules pkg-config qt6-base qt6-tools gettext
  elogind sonic-frameworks-package sonic-frameworks-settings-utils sonic-frameworks-settings"
-makedepends="sonic-frameworks-settings-devel sonic-frameworks-crash-handler-devel sonic-frameworks-qml-bridge-devel sonic-frameworks-internationalization-devel
- sonic-frameworks-idle-tracker-devel sonic-frameworks-notifications-devel sonic-frameworks-package-devel sonic-frameworks-svg-devel
- sonic-frameworks-xml-gui-devel sonic-frameworks-settings-utils-devel sonic-frameworks-device-integration-devel libX11-devel libxcb-devel libXi-devel
- pam-devel qt6-base-private-devel qt6-declarative-devel sonic-frameworks-core-addons-devel
- sonic-frameworks-io-devel sonic-frameworks-keybind-devel sonic-frameworks-quick-ui-devel
- sonic-frameworks-windowsystem-devel sonic-interface-libraries-devel sonic-screen-library-devel
- xcb-util-keysyms-devel layer-shell-qt-devel"
+makedepends="sonic-frameworks-settings-devel sonic-frameworks-crash-handler-devel sonic-frameworks-qml-bridge-devel
+ sonic-frameworks-internationalization-devel sonic-frameworks-idle-tracker-devel sonic-frameworks-notifications-devel
+ sonic-frameworks-package-devel sonic-frameworks-svg-devel sonic-frameworks-xml-gui-devel sonic-frameworks-settings-utils-devel
+ sonic-frameworks-device-integration-devel libX11-devel libxcb-devel libXi-devel pam-devel qt6-base-private-devel qt6-declarative-devel
+ sonic-frameworks-core-addons-devel sonic-frameworks-io-devel sonic-frameworks-keybind-devel sonic-frameworks-quick-ui-devel
+ sonic-frameworks-windowsystem-devel sonic-interface-libraries-devel sonic-screen-library-devel xcb-util-keysyms-devel layer-shell-qt-devel"
 short_desc="Library and components for secure lock screen architecture"
+depends="sonic-frameworks-quick-silver-style"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-screenlocker"
