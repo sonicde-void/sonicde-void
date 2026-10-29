@@ -1,0 +1,20 @@
+# Template file for 'sonic-frameworks-quick-silver-style'
+pkgname=sonic-frameworks-quick-silver-style
+version=6.8.0
+revision=1
+build_style=cmake
+configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
+ -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
+hostmakedepends="sonic-frameworks-cmake-modules qt6-base sonic-frameworks-settings qt6-declarative-host-tools"
+makedepends="sonic-frameworks-settings-devel sonic-frameworks-settings-ui-devel sonic-frameworks-gui-addons-devel
+ sonic-frameworks-icon-themes-devel sonic-frameworks-quick-charts-devel sonic-frameworks-quick-ui-devel
+ qt6-declarative-private-devel"
+short_desc="Silver inspired QQC2 Style"
+maintainer="nerdyslacker <karyan40024@gmail.com>"
+license="LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL"
+homepage="https://github.com/Sonic-DE/sonic-frameworks-quick-silver-style"
+distfiles="https://github.com/Sonic-DE/sonic-frameworks-quick-silver-style/archive/refs/tags/${version}.tar.gz"
+checksum=ba70c67b6c0465958edc3ff19e741371d763ac2c322b6347d201838de40fd633
+provides="qqc2-breeze-style-${version}_${revision}"
+conflicts="qqc2-breeze-style"
+replaces="qqc2-breeze-style>=0"
