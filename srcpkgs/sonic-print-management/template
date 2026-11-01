@@ -1,0 +1,25 @@
+# Template file for 'sonic-print-management'
+pkgname=sonic-print-management
+version=6.8.0
+revision=1
+build_style=cmake
+configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
+ -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+ -DKDE_INSTALL_LIBEXECDIR=libexec"
+hostmakedepends="sonic-frameworks-cmake-modules qt6-base gettext sonic-frameworks-settings-utils
+ sonic-frameworks-settings sonic-frameworks-package qt6-declarative-host-tools"
+makedepends="plasma-framework-devel sonic-frameworks-settings-utils-devel sonic-frameworks-dbus-devel
+ sonic-frameworks-core-addons-devel sonic-frameworks-io-devel sonic-frameworks-notifications-devel
+ sonic-frameworks-widgets-addons-devel sonic-frameworks-settings-ui-devel sonic-frameworks-settings-devel
+ sonic-frameworks-windowsystem-devel sonic-frameworks-quick-ui-devel sonic-interface-libraries-devel 
+ sonic-frameworks-package-devel sonic-frameworks-quick-ui-addons-devel sonic-frameworks-qml-bridge-devel
+ sonic-frameworks-internationalization-devel cups-devel system-config-printer qt6-declarative-devel libgomp-devel"
+short_desc="Printing management for Sonic shell"
+maintainer="nerdyslacker <karyan40024@gmail.com>"
+license="GPL-2.0-or-later"
+homepage="https://github.com/Sonic-DE/sonic-print-management"
+distfiles="https://github.com/Sonic-DE/sonic-print-management/archive/refs/tags/${version}.tar.gz"
+checksum=ae235e77dc4f7792ac7c21843b385377c594ba8cabbe770e2ff5e534b6a0df74
+provides="print-manager-${version}_${revision}"
+conflicts="print-manager"
+replaces="print-manager>=0"

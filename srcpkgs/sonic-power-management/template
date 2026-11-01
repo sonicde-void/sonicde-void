@@ -1,0 +1,29 @@
+# Template file for 'sonic-power-management'
+pkgname=sonic-power-management
+version=6.8.0.1
+revision=1
+build_style=cmake
+configure_args="-DBUILD_TESTING=OFF -DKDE_INSTALL_LIBEXECDIR=libexec
+ -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins -DKDE_INSTALL_QMLDIR=lib/qt6/qml"
+hostmakedepends="sonic-frameworks-cmake-modules pkg-config gettext qt6-base qt6-tools
+ qt6-declarative-host-tools sonic-frameworks-doctools sonic-frameworks-settings-utils
+ sonic-frameworks-settings sonic-frameworks-windowsystem sonic-frameworks-auth-tools
+ sonic-frameworks-package"
+makedepends="sonic-frameworks-bluetooth-devel sonic-screen-library-devel sonic-frameworks-networkmanager-devel
+ sonic-frameworks-device-integration-devel sonic-frameworks-settings-utils-devel sonic-frameworks-auth-devel
+ sonic-frameworks-doctools-devel sonic-frameworks-idle-tracker-devel sonic-frameworks-xml-gui-devel
+ sonic-frameworks-notifications-devel sonic-frameworks-io-devel sonic-frameworks-quick-ui-devel
+ sonic-frameworks-data-models-devel sonic-activities-devel qcoro-qt6-devel sonic-frameworks-settings-devel
+ sonic-frameworks-crash-handler-devel sonic-frameworks-dbus-devel sonic-frameworks-internationalization-devel
+ sonic-frameworks-keybind-devel sonic-frameworks-runner-devel sonic-frameworks-windowsystem-devel
+ sonic-interface-libraries-devel eudev-libudev-devel libxcb-devel sonic-workspace-devel ddcutil-devel
+ qt6-base-private-devel libgomp-devel"
+short_desc="Power consumption settings of a Sonic shell"
+maintainer="nerdyslacker <karyan40024@gmail.com>"
+license="GPL-2.0-or-later"
+homepage="https://github.com/Sonic-DE/sonic-power-management"
+distfiles="https://github.com/Sonic-DE/sonic-power-management/archive/refs/tags/${version}.tar.gz"
+checksum=c057ae52b09b9c72797b4315e490d8875f1d9df4c106bc4981d5b91065961163
+provides="powerdevil-${version}_${revision}"
+conflicts="powerdevil"
+replaces="powerdevil>=0"
