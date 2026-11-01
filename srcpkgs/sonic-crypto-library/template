@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-crypto-library"
 distfiles="https://github.com/Sonic-DE/sonic-crypto-library/archive/refs/tags/${version}.tar.gz"
-checksum=cde58f4f91dac58220a96fa9d96882f06ad1e7112eea93263bb32f169f7a5108
+checksum=5259a57b7843e05a5a8c4658c6b28baf696c09c69fbd50b33292072bd985acff
 provides="qca-qt6-${version}_${revision}"
 conflicts="qca-qt6"
 replaces="qca-qt6>=0"

@@ -1,7 +1,7 @@
 # Template file for 'sonic-tv-interface'
 pkgname=sonic-tv-interface
 version=6.8.0
-revision=1
+revision=2
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-base pkg-config qt6-declarative-host-tools
  sonic-frameworks-package sonic-frameworks-settings sonic-frameworks-settings-utils gettext"
@@ -12,8 +12,8 @@ makedepends="qt6-multimedia-devel qt6-declarative-private-devel qt6-webengine-de
  sonic-frameworks-quick-ui-devel sonic-frameworks-notifications-devel sonic-frameworks-windowsystem-devel
  sonic-frameworks-svg-devel sonic-interface-libraries-devel sonic-activities-devel sonic-activities-stats-devel
  sonic-workspace-devel sonic-screen-library-devel SDL3-devel libcec-devel libgomp-devel"
-depends="sonic-win sonic-network-manager sonic-audio-applet-pulse sonic-terminal-tools sonic-screen milou
- kdeconnect plasma-nano plasma-keyboard"
+depends="sonic-win sonic-network-manager sonic-audio-applet-pulse sonic-terminal-tools sonic-screen
+ sonic-file-search-ui kdeconnect plasma-nano plasma-keyboard"
 short_desc="Interface for large screens such as TVs"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later AND CC-BY-SA-4.0"
