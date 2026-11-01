@@ -10,8 +10,9 @@ configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base
  qt6-declarative-host-tools gettext sonic-frameworks-settings-devel"
 makedepends="qt6-declarative-devel sonic-frameworks-core-addons-devel sonic-frameworks-settings-devel
- sonic-frameworks-dbus-devel sonic-frameworks-internationalization-devel sonic-frameworks-idle-tracker-devel sonic-frameworks-device-integration-devel
- sonic-frameworks-crash-handler-devel sonic-frameworks-io-devel sonic-frameworks-file-metadata-devel lmdb-devel"
+ sonic-frameworks-dbus-devel sonic-frameworks-internationalization-devel sonic-frameworks-idle-tracker-devel
+ sonic-frameworks-device-integration-devel sonic-frameworks-crash-handler-devel sonic-frameworks-io-devel
+ sonic-frameworks-file-metadata-devel lmdb-devel"
 short_desc="Framework for searching and managing metadata"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"

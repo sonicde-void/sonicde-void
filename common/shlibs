@@ -2012,8 +2012,8 @@ libKPipeWireRecord.so.6 sonic-pipewire-6.8.0_1
 libKPipeWireDmaBuf.so.6 sonic-pipewire-6.8.0_1
 libPlasmaActivities.so.7 sonic-activities-6.8.0_1
 libPlasmaActivitiesStats.so.1 sonic-activities-stats-6.8.0_1
-libPlasma.so.7 sonic-interface-libraries-6.8.0_1
-libPlasmaQuick.so.7 sonic-interface-libraries-6.8.0_1
+libPlasma.so.8 sonic-interface-libraries-6.8.0_1
+libPlasmaQuick.so.8 sonic-interface-libraries-6.8.0_1
 libPlasma5Support.so.6 sonic-plasma5-support-library-6.8.0_1
 libkdecorations3.so.6 sonic-decoration-6.8.0_1
 libkdecorations3private.so.2 sonic-decoration-6.8.0_1
