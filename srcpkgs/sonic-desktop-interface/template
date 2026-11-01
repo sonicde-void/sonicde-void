@@ -1,7 +1,7 @@
 # Template file for 'sonic-desktop-interface'
 pkgname=sonic-desktop-interface
 version=6.8.0.3
-revision=2
+revision=3
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -26,7 +26,7 @@ makedepends="sonic-frameworks-file-search-devel sonic-frameworks-bookmarks-devel
  sonic-frameworks-spell-check-devel eudev-libudev-devel xcb-util-keysyms-devel sonic-frameworks-quick-desktop-style-devel
  sonic-accounts-integration-devel libaccounts-qt6-devel signon-plugin-oauth2 ibus-devel xf86-input-evdev-devel xf86-input-libinput-devel
  xf86-input-synaptics-devel sonic-daemon-devel libglib-devel alsa-lib-devel xcb-util-image-devel"
-depends="sonic-launcher-menu-edit sonic-polkit-agent powerdevil systemsettings sonic-frameworks-quick-desktop-style
+depends="sonic-launcher-menu-edit sonic-polkit-agent sonic-power-management systemsettings sonic-frameworks-quick-desktop-style
  sonic-plasma5-support-library accountsservice sonic-system-stats xdg-user-dirs noto-fonts-emoji"
 short_desc="Sonic Desktop Interface"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
