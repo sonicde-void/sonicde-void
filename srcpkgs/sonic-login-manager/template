@@ -1,7 +1,7 @@
 # Template file for 'sonic-login-manager'
 pkgname=sonic-login-manager
-version=6.8.0.3
-revision=2
+version=6.8.2
+revision=1
 build_style=cmake
 configure_args=" -DKDE_INSTALL_LIBEXECDIR=libexec -DSPLIT_BUILD=ON
  -DINSTALL_PAM_CONFIGURATION=OFF -DX_SERVER_EXECUTABLE=/usr/libexec/Xorg
@@ -20,7 +20,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-login-manager"
 distfiles="https://github.com/Sonic-DE/sonic-login-manager/archive/refs/tags/${version}.tar.gz"
-checksum=d0b6e6598ae3dfa864474594021fa010a3c03b16df34c48ec60e0c80cdaf10ea
+checksum=ed2d6a14dcc247adb6f997787f3ed08d53261ef7cd84858f468d364aff6f86f7
 provides="plasma-login-manager-${version}_${revision}"
 system_groups="soniclogin"
 system_accounts="soniclogin"

@@ -1,6 +1,6 @@
 # Template file for 'sonic-terminal'
 pkgname=sonic-terminal
-version=26.08.2
+version=26.08.3
 revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -20,7 +20,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-terminal"
 distfiles="https://github.com/Sonic-DE/sonic-terminal/archive/refs/tags/${version}.tar.gz"
-checksum=f07a6ae2b1e0320d59e4c555c72a45143d2b00654344aaab3d39d11188f1caf2
+checksum=0d567f76ad20d21d97b018609a5b3c1604b1faa0bc3c096791bab59cfeccf73e
 provides="konsole-${version}_${revision}"
 conflicts="konsole"
 replaces="konsole>=0"

@@ -1,6 +1,6 @@
 # Template file for 'sonic-terminal-tools'
 pkgname=sonic-terminal-tools
-version=6.8.0
+version=6.8.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -19,7 +19,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-terminal-tools"
 distfiles="https://github.com/Sonic-DE/sonic-terminal-tools/archive/refs/tags/${version}.tar.gz"
-checksum=d91294df276e1bbcfdd540f8e5b203e03e59e1c4119ad5ae4dd9d96fc0e920a4
+checksum=cb736bf70bd6220b1b81a62195d6c22d2fd73e35d9b5de8b49952ad399b5fac2
 provides="kde-cli-tools-${version}_${revision}"
 conflicts="kde-cli-tools"
 replaces="kde-cli-tools>=0"

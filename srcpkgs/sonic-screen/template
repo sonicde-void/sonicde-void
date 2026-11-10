@@ -1,7 +1,7 @@
 # Template file for 'sonic-screen'
 pkgname=sonic-screen
-version=6.8.0
-revision=2
+version=6.8.2
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -20,7 +20,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-screen"
 distfiles="https://github.com/Sonic-DE/sonic-screen/archive/refs/tags/${version}.tar.gz"
-checksum=18b84570b7a1d40e43a0f2f91887814e14328a0f1a200b8d799aca56d10baefe
+checksum=18c699888476b0e854759faeec5d40120f4738de6b2bb1017ec0b7182d7efc12
 provides="kscreen-${version}_${revision}"
 conflicts="kscreen"
 replaces="kscreen>=0"

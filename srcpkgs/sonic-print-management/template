@@ -1,6 +1,6 @@
 # Template file for 'sonic-print-management'
 pkgname=sonic-print-management
-version=6.8.0
+version=6.8.2
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -19,7 +19,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-print-management"
 distfiles="https://github.com/Sonic-DE/sonic-print-management/archive/refs/tags/${version}.tar.gz"
-checksum=ae235e77dc4f7792ac7c21843b385377c594ba8cabbe770e2ff5e534b6a0df74
+checksum=16d362b309ebc401ee9806291cfd3e297207beea7d77253906457c12c262693a
 provides="print-manager-${version}_${revision}"
 conflicts="print-manager"
 replaces="print-manager>=0"

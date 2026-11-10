@@ -1,6 +1,6 @@
 # Template file for 'sonic-partition-manager'
 pkgname=sonic-partition-manager
-version=26.08.2
+version=26.08.3
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -16,7 +16,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-partition-manager"
 distfiles="https://github.com/Sonic-DE/sonic-partition-manager/archive/refs/tags/${version}.tar.gz"
-checksum=bd342fdf5277b91160f297242eb1eb3bdfbfafe04cc2450f7c9f91ad9bd1c100
+checksum=9ce666f2c05bd897a5daa0bd4d0c20c4b34bdd6610aa667e2fcf57ffafa89428
 provides="partitionmanager-${version}_${revision}"
 conflicts="partitionmanager"
 replaces="partitionmanager>=0"

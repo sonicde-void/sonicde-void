@@ -1,6 +1,6 @@
 # Template file for 'sonic-browser-integration'
 pkgname=sonic-browser-integration
-version=6.8.0
+version=6.8.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF
@@ -20,7 +20,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-browser-integration"
 distfiles="https://github.com/Sonic-DE/sonic-browser-integration/archive/refs/tags/${version}.tar.gz"
-checksum=bcea627846cac1f046bb1df6de6e3802ba28bccdae26ea8107dc5b5af769299f
+checksum=805e5753324b57ba36bcd332698245c21fe3f2711fbe0757a2b5b04ded19810a
 provides="plasma-browser-integration-${version}_${revision}"
 conflicts="plasma-browser-integration"
 replaces="plasma-browser-integration>=0"

@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-settings-ui'
 pkgname=sonic-frameworks-settings-ui
-version=6.31.0
+version=6.31.0.1
 revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake"
@@ -13,7 +13,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-settings-ui"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-settings-ui/archive/refs/tags/${version}.tar.gz"
-checksum=a6a753a8333c6e32b890ccb6fd80f28b2a96885edfcacad7bf0596cc8ce15cb5
+checksum=5901e2219b42f66e48bf08a62771e4dcf1772060cf0886b8739f17d186928c55
 provides="kf6-kconfigwidgets-${version}_${revision}"
 conflicts="kf6-kconfigwidgets"
 replaces="kf6-kconfigwidgets>=0"
