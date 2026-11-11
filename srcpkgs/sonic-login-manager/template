@@ -1,7 +1,7 @@
 # Template file for 'sonic-login-manager'
 pkgname=sonic-login-manager
 version=6.8.2
-revision=1
+revision=2
 build_style=cmake
 configure_args=" -DKDE_INSTALL_LIBEXECDIR=libexec -DSPLIT_BUILD=ON
  -DINSTALL_PAM_CONFIGURATION=OFF -DX_SERVER_EXECUTABLE=/usr/libexec/Xorg
@@ -13,7 +13,8 @@ makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-settings-dev
  qt6-base-private-devel qt6-declarative-devel qt6-qt5compat-devel qt6-shadertools-devel pam-devel libXau-devel
  xorg-server-devel sonic-frameworks-auth-devel sonic-frameworks-core-addons-devel sonic-frameworks-io-devel
  sonic-frameworks-quick-ui-devel sonic-frameworks-windowsystem-devel sonic-interface-libraries-devel
- sonic-frameworks-icon-themes-devel sonic-workspace-devel sonic-screen-library-devel layer-shell-qt-devel libcap-devel"
+ sonic-frameworks-icon-themes-devel sonic-workspace-devel sonic-screen-library-devel layer-shell-qt-devel
+ libcap-devel sonic-frameworks-logging-devel sonic-frameworks-ipc-devel sonic-frameworks-init-info-devel"
 depends="libelogind"
 short_desc="Sonic Login Manager"
 maintainer="nerdyslacker <karyan40024@gmail.com>"

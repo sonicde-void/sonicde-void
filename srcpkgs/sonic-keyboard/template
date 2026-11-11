@@ -1,0 +1,29 @@
+# Template file for 'sonic-keyboard'
+pkgname=sonic-keyboard
+version=6.8.2
+revision=1
+build_style=cmake
+configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
+ -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+ -DKDE_INSTALL_LIBEXECDIR=libexec"
+hostmakedepends="sonic-frameworks-cmake-modules gettext pkg-config
+ qt6-declarative-host-tools qt6-base qt6-tools sonic-frameworks-settings
+ sonic-frameworks-settings-utils sonic-frameworks-package"
+makedepends="sonic-interface-libraries-devel sonic-frameworks-core-addons-devel
+ sonic-frameworks-internationalization-devel sonic-frameworks-settings-utils-devel
+ sonic-frameworks-settings-devel qt6-virtualkeyboard-devel qt6-base-private-devel
+ sonic-frameworks-crash-handler-devel sonic-frameworks-quick-ui-devel"
+short_desc="Virtual Keyboard for Qt based desktops"
+maintainer="nerdyslacker <karyan40024@gmail.com>"
+license="(GPL-2.0-only OR GPL-3.0-only OR custom:LicenseRef-KDE-Accepted-GPL) AND GPL-3.0-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR custom:LicenseRef-KDE-Accepted-LGPL)"
+homepage="https://github.com/Sonic-DE/sonic-keyboard"
+distfiles="https://github.com/Sonic-DE/sonic-keyboard/archive/refs/tags/${version}.tar.gz"
+checksum=17acbd18da73ec23783e8b7920bafc40838e0233f53b0ee018cfd60c89da59ef
+provides="plasma-keyboard-${version}_${revision}"
+conflicts="plasma-keyboard"
+replaces="plasma-keyboard>=0"
+
+post_install() {
+	vlicense LICENSES/LicenseRef-KDE-Accepted-GPL.txt
+	vlicense LICENSES/LicenseRef-KDE-Accepted-LGPL.txt
+}
