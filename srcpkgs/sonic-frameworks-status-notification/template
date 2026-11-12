@@ -1,6 +1,6 @@
 # Template file for 'sonic-frameworks-status-notification'
 pkgname=sonic-frameworks-status-notification
-version=6.31.0
+version=6.31.0.1
 revision=1
 build_style=cmake
 _llvmver=21
@@ -14,7 +14,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/Sonic-DE/sonic-frameworks-status-notification"
 distfiles="https://github.com/Sonic-DE/sonic-frameworks-status-notification/archive/refs/tags/${version}.tar.gz"
-checksum=6ea0443ea0fd30b9cd5a1f948461071d19b0b4d5b18bf86aa38a8ff4e85762ea
+checksum=96bf531adbd3d40f9ce8971507b8d7838b002561a2d2f48524310c09404550f3
 provides="kf6-kstatusnotifieritem-${version}_${revision}"
 conflicts="kf6-kstatusnotifieritem"
 replaces="kf6-kstatusnotifieritem>=0"

@@ -1,0 +1,23 @@
+# Template file for 'sonic-frameworks-init-info'
+pkgname=sonic-frameworks-init-info
+version=6.31.0
+revision=1
+build_style=cmake
+hostmakedepends="sonic-frameworks-cmake-modules"
+makedepends="sonic-frameworks-logging-devel qt6-base-devel"
+short_desc="Init system information utilities for SonicDE frameworks"
+maintainer="nerdyslacker <karyan40024@gmail.com>"
+license="LGPL-2.0-only OR LGPL-3.0-only"
+homepage="https://github.com/Sonic-DE/sonic-frameworks-init-info"
+distfiles="https://github.com/Sonic-DE/sonic-frameworks-init-info/archive/refs/tags/${version}.tar.gz"
+checksum=e901ddb2512d29a6cf41a602fb5704e1567b57b73971311c6812ff4396158513
+
+sonic-frameworks-init-info-devel_package() {
+    depends="sonic-frameworks-logging-devel qt6-base-devel ${sourcepkg}>=${version}_${revision}"
+    short_desc+=" - development files"
+    pkg_install() {
+        vmove usr/include
+        vmove usr/lib/cmake
+        vmove "usr/lib/*.so"
+    }
+}

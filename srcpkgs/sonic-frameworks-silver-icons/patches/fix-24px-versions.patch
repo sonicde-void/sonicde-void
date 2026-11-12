@@ -1,0 +1,60 @@
+--- a/tools/generate-24px-versions.py	2026-11-09 22:38:11.000000000 +0400
++++ b/tools/generate-24px-versions.py	2026-11-11 01:04:51.547278792 +0400
+@@ -154,23 +154,49 @@
+ 
+ 
+ def make_file_link(input_dir, output_dir, path):
+-    # only handle links
++    # Only handle symbolic links
+     if not os.path.islink(path):
+         return
+ 
+-    # Filter out files
++    # Only handle SVG icons in 22px directories
+     if not (path.endswith('.svg') and '/22/' in path):
+         return
+ 
+-    file_destination = path.replace(input_dir, output_dir, 1).replace('/22/', '/24/')
++    file_destination = path.replace(
++        input_dir, output_dir, 1
++    ).replace('/22/', '/24/')
++
++    # Resolve the original symlink to its actual source file.
++    try:
++        source_target = os.path.realpath(path)
++        if not os.path.isfile(source_target):
++            return
++
++        # Map the resolved source to its generated 24px location.
++        relative_target = os.path.relpath(source_target, input_dir)
++        generated_target = os.path.join(
++            output_dir,
++            relative_target.replace('/22/', '/24/')
++        )
++
++        # Skip links whose generated targets don't exist.
++        if not os.path.isfile(generated_target):
++            return
++
++        # Calculate a relative symlink target.
++        symlink_source = os.path.relpath(
++            generated_target,
++            os.path.dirname(file_destination)
++        )
++
++        if os.path.lexists(file_destination):
++            os.remove(file_destination)
+ 
+-    # Regenerate symlinks or edit SVGs, don't create dead links for icons we failed to generate
+-    symlink_source = os.readlink(path).replace('/22/', '/24/')
+-    if os.path.islink(file_destination):
+-        os.remove(file_destination)
+-    if not os.path.exists(file_destination):
+         os.symlink(symlink_source, file_destination)
+ 
++    except (OSError, ValueError):
++        return
++
+ 
+ def main(input_dirs, output_dir):
+     # first pass: create dirs and files

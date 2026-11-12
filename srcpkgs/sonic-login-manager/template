@@ -1,6 +1,6 @@
 # Template file for 'sonic-login-manager'
 pkgname=sonic-login-manager
-version=6.8.0.3
+version=6.8.2
 revision=2
 build_style=cmake
 configure_args=" -DKDE_INSTALL_LIBEXECDIR=libexec -DSPLIT_BUILD=ON
@@ -13,14 +13,15 @@ makedepends="sonic-frameworks-settings-utils-devel sonic-frameworks-settings-dev
  qt6-base-private-devel qt6-declarative-devel qt6-qt5compat-devel qt6-shadertools-devel pam-devel libXau-devel
  xorg-server-devel sonic-frameworks-auth-devel sonic-frameworks-core-addons-devel sonic-frameworks-io-devel
  sonic-frameworks-quick-ui-devel sonic-frameworks-windowsystem-devel sonic-interface-libraries-devel
- sonic-frameworks-icon-themes-devel sonic-workspace-devel sonic-screen-library-devel layer-shell-qt-devel libcap-devel"
+ sonic-frameworks-icon-themes-devel sonic-workspace-devel sonic-screen-library-devel layer-shell-qt-devel
+ libcap-devel sonic-frameworks-logging-devel sonic-frameworks-ipc-devel sonic-frameworks-init-info-devel"
 depends="libelogind"
 short_desc="Sonic Login Manager"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-login-manager"
 distfiles="https://github.com/Sonic-DE/sonic-login-manager/archive/refs/tags/${version}.tar.gz"
-checksum=d0b6e6598ae3dfa864474594021fa010a3c03b16df34c48ec60e0c80cdaf10ea
+checksum=ed2d6a14dcc247adb6f997787f3ed08d53261ef7cd84858f468d364aff6f86f7
 provides="plasma-login-manager-${version}_${revision}"
 system_groups="soniclogin"
 system_accounts="soniclogin"

@@ -1,7 +1,7 @@
 # Template file for 'sonic-screenlocker'
 pkgname=sonic-screenlocker
-version=6.8.0.2
-revision=3
+version=6.8.2
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -13,14 +13,15 @@ makedepends="sonic-frameworks-settings-devel sonic-frameworks-crash-handler-deve
  sonic-frameworks-package-devel sonic-frameworks-svg-devel sonic-frameworks-xml-gui-devel sonic-frameworks-settings-utils-devel
  sonic-frameworks-device-integration-devel libX11-devel libxcb-devel libXi-devel pam-devel qt6-base-private-devel qt6-declarative-devel
  sonic-frameworks-core-addons-devel sonic-frameworks-io-devel sonic-frameworks-keybind-devel sonic-frameworks-quick-ui-devel
- sonic-frameworks-windowsystem-devel sonic-interface-libraries-devel sonic-screen-library-devel xcb-util-keysyms-devel layer-shell-qt-devel"
+ sonic-frameworks-windowsystem-devel sonic-interface-libraries-devel sonic-screen-library-devel xcb-util-keysyms-devel
+ layer-shell-qt-devel sonic-frameworks-logging-devel sonic-frameworks-ipc-devel"
 short_desc="Library and components for secure lock screen architecture"
 depends="sonic-frameworks-quick-silver-style"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-screenlocker"
 distfiles="https://github.com/Sonic-DE/sonic-screenlocker/archive/refs/tags/${version}.tar.gz"
-checksum=32b190a21a5ca2e7d8d2c90068de9a69839d46ac557d78a5067dfd471a1f67a9
+checksum=c1ebbcdc458d312ab67eda81d83cdd229ca26ff4e74c5ab1c84cd86bcbad8423
 provides="kscreenlocker-${version}_${revision}"
 conflicts="kscreenlocker"
 replaces="kscreenlocker>=0"

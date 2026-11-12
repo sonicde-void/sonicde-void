@@ -1,6 +1,6 @@
 # Template file for 'sonic-oxygen-icons'
 pkgname=sonic-oxygen-icons
-version=6.31.0
+version=6.31.0.1
 revision=1
 build_style=cmake
 hostmakedepends="sonic-frameworks-cmake-modules qt6-tools qt6-base"
@@ -11,7 +11,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-3.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-oxygen-icons"
 distfiles="https://github.com/Sonic-DE/sonic-oxygen-icons/archive/refs/tags/${version}.tar.gz"
-checksum=ae899a9f2dc5e57db733ffcb662522ec432a3d31490f6f9362ae34dd00a32c1d
+checksum=b841145ddcfe84886577868b9d6445f0f1a0d7dccda8b2bd6fcd6be46164e9c6
 provides="oxygen-icons-${version}_${revision}"
 conflicts="oxygen-icons"
 replaces="oxygen-icons>=0"

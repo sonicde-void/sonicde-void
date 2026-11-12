@@ -1,6 +1,6 @@
 # Template file for 'sonic-system-log'
 pkgname=sonic-system-log
-version=26.08.2
+version=26.08.3
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -19,7 +19,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-system-log"
 distfiles="https://github.com/Sonic-DE/sonic-system-log/archive/refs/tags/${version}.tar.gz"
-checksum=85180d7c8dfe50d6329bf4926a203f74d9ad47a4d9d3412d4255264c52d4be0f
+checksum=8f48b226e38e6b208033899aa7acebc32546c0cadeec7f086f0be6b8d576c2de
 provides="ksystemlog-${version}_${revision}"
 conflicts="ksystemlog"
 replaces="ksystemlog>=0"

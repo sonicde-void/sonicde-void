@@ -4699,3 +4699,6 @@ libQt6WaylandCompositorXdgShell.so.6 qt6-wayland-6.11.2_1
 libQt6WaylandCompositorPresentationTime.so.6 qt6-wayland-6.11.2_1
 libmysqlclient.so.21 libmariadbclient-devel-11.1.2_2
 libchibi-scheme.so.0 chibi-scheme-0.12_1
+libSonicLogging.so.6 sonic-frameworks-logging-devel-6.31.0_1
+libSonicIpc.so.6 sonic-frameworks-ipc-devel-6.31.0_1
+libSonicInitInfo.so.6 sonic-frameworks-init-info-devel-6.31.0_1

@@ -1,7 +1,7 @@
 # Template file for 'sonic-breeze'
 pkgname=sonic-breeze
-version=6.8.0
-revision=2
+version=6.8.2
+revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -18,7 +18,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-breeze"
 distfiles="https://github.com/Sonic-DE/sonic-breeze/archive/refs/tags/${version}.tar.gz"
-checksum=cc66d45f6830bf502dfb4c82ca7ee9369498a41a677d6dfb6ba860299b325e18
+checksum=b131b77ca9d9bc15440b79fdee77df0a470e301408a26814169d5d9dba737c51
 provides="breeze-${version}_${revision} breeze-icons-${version}_${revision}"
 conflicts="breeze breeze-qt6 breeze-icons"
 replaces="breeze>=0 breeze-qt6>=0 breeze-icons>=0"

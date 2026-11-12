@@ -1,6 +1,6 @@
 # Template file for 'sonic-power-management'
 pkgname=sonic-power-management
-version=6.8.0.1
+version=6.8.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKDE_INSTALL_LIBEXECDIR=libexec
@@ -23,7 +23,7 @@ maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-power-management"
 distfiles="https://github.com/Sonic-DE/sonic-power-management/archive/refs/tags/${version}.tar.gz"
-checksum=c057ae52b09b9c72797b4315e490d8875f1d9df4c106bc4981d5b91065961163
+checksum=bb7dfe1fbc64406bce4972f12c93a9ab60bccbfa5a984a504312ad5f9b42a9a1
 provides="powerdevil-${version}_${revision}"
 conflicts="powerdevil"
 replaces="powerdevil>=0"
